@@ -13,12 +13,33 @@
         <link rel="stylesheet" href="css/normalize.css" type="text/css">
         <link rel="stylesheet" href="css/reports.css" type="text/css">
        
+    @if (Route::has('login'))
+                <div class="top-left links">
+                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                        Logout
+                        </a>
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                        </form>
+                </div>
+            @endif
     </head>
     <body>
         <header>
         <h3>Bee Lab - reports</h3>
+
+         
     
     </header>
+
+    <div class="top-left">
+            <div class="content">
+                <div class="title m-b-md">
+                    Reports
+                </div>
+            </div>
 
     <main>
         <div class="barra">
@@ -38,25 +59,6 @@
             </nav>
         </div>
 
-        <div class="top-left">
-            <div class="content">
-                <div class="title m-b-md">
-                    Reports
-                </div>
-            </div>
-
-        @if (Route::has('login'))
-                <div class="top-right links">
-                        <a href="{{ url('/home') }}">Home</a>
-                        <a href="{{ url('/logout') }}" onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                                        Logout
-                        </a>
-                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                        </form>
-                </div>
-            @endif
         </div>
     </main>
         

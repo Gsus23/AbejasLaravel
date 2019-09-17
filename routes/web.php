@@ -16,15 +16,16 @@ Route::get('/', function () {
 });
 
 Route::name('imprimir')->get('/imprimir-pdf ', 'Controller@imprimir');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
 Route::get('/reports', 'ReportsController@index');
 Route::get('/statistics', 'StatisticsController@index');
 Route::get('/estimates', 'EstimateController@index');
 Route::get('/analysis', 'AnalysisController@index');
 Route::get('/help', 'HelpController@index');
 Route::get('/imprimir', 'Controller@imprimir');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
 
 
