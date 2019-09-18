@@ -10,11 +10,13 @@
     "require": {
         "php": "^7.3",
         "barryvdh/laravel-dompdf": "^0.8.5",
+        "caffeinated/shinobi": "^5.0",
         "fideloper/proxy": "^4.0",
         "genealabs/laravel-maps": "^0.6.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
-        "laravel/ui": "^1.0"
+        "laravel/ui": "^1.0",
+        "laravelcollective/html": "^6.0"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

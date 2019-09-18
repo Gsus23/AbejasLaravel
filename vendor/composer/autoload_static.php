@@ -22,6 +22,7 @@ class ComposerStaticInitd3914ae39ef8489708147384726187d5
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -137,7 +138,9 @@ class ComposerStaticInitd3914ae39ef8489708147384726187d5
         'C' => 
         array (
             'Cron\\' => 5,
+            'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
+            'Caffeinated\\Shinobi\\' => 20,
         ),
         'B' => 
         array (
@@ -388,9 +391,17 @@ class ComposerStaticInitd3914ae39ef8489708147384726187d5
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
+        'Caffeinated\\Shinobi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/caffeinated/shinobi/src',
         ),
         'Barryvdh\\DomPDF\\' => 
         array (
@@ -473,6 +484,24 @@ class ComposerStaticInitd3914ae39ef8489708147384726187d5
         'Barryvdh\\DomPDF\\Facade' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/Facade.php',
         'Barryvdh\\DomPDF\\PDF' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/PDF.php',
         'Barryvdh\\DomPDF\\ServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-dompdf/src/ServiceProvider.php',
+        'Caffeinated\\Shinobi\\Concerns\\HasPermissions' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Concerns/HasPermissions.php',
+        'Caffeinated\\Shinobi\\Concerns\\HasRoles' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Concerns/HasRoles.php',
+        'Caffeinated\\Shinobi\\Concerns\\HasRolesAndPermissions' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Concerns/HasRolesAndPermissions.php',
+        'Caffeinated\\Shinobi\\Concerns\\RefreshesPermissionCache' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Concerns/RefreshesPermissionCache.php',
+        'Caffeinated\\Shinobi\\Contracts\\Permission' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Contracts/Permission.php',
+        'Caffeinated\\Shinobi\\Contracts\\Role' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Contracts/Role.php',
+        'Caffeinated\\Shinobi\\Exceptions\\PermissionNotFoundException' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Exceptions/PermissionNotFoundException.php',
+        'Caffeinated\\Shinobi\\Facades\\Shinobi' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Facades/Shinobi.php',
+        'Caffeinated\\Shinobi\\Middleware\\UserHasAllRoles' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Middleware/UserHasAllRoles.php',
+        'Caffeinated\\Shinobi\\Middleware\\UserHasAnyRole' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Middleware/UserHasAnyRole.php',
+        'Caffeinated\\Shinobi\\Middleware\\UserHasRole' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Middleware/UserHasRole.php',
+        'Caffeinated\\Shinobi\\Models\\Permission' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Models/Permission.php',
+        'Caffeinated\\Shinobi\\Models\\Role' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Models/Role.php',
+        'Caffeinated\\Shinobi\\Shinobi' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Shinobi.php',
+        'Caffeinated\\Shinobi\\ShinobiServiceProvider' => __DIR__ . '/..' . '/caffeinated/shinobi/src/ShinobiServiceProvider.php',
+        'Caffeinated\\Shinobi\\Tactics\\AssignRoleTo' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Tactics/AssignRoleTo.php',
+        'Caffeinated\\Shinobi\\Tactics\\GivePermissionTo' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Tactics/GivePermissionTo.php',
+        'Caffeinated\\Shinobi\\Tactics\\RevokePermissionsFrom' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Tactics/RevokePermissionFrom.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
         'Carbon\\CarbonInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterface.php',
@@ -507,6 +536,13 @@ class ComposerStaticInitd3914ae39ef8489708147384726187d5
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
@@ -2888,6 +2924,7 @@ class ComposerStaticInitd3914ae39ef8489708147384726187d5
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'Parsedown' => __DIR__ . '/..' . '/erusev/parsedown/Parsedown.php',
+        'PermissionsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PermissionsTableSeeder.php',
         'PharIo\\Manifest\\Application' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Application.php',
         'PharIo\\Manifest\\ApplicationName' => __DIR__ . '/..' . '/phar-io/manifest/src/values/ApplicationName.php',
         'PharIo\\Manifest\\Author' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Author.php',
