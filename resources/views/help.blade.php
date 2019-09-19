@@ -13,25 +13,46 @@
         
     </head>
     <body>
-        <div class="top-left">
-            <div class="content">
-                <div class="title m-b-md">
-                    Help
-                </div>
+        <header>
+            <div class="izq">
+                <h3>Bee Lab - help</h3>
             </div>
-
-        @if (Route::has('login'))
-                <div class="top-right links">
-                        <a href="{{ url('/home') }}">Home</a>
-                        <a href="{{ url('/logout') }}" onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                                        Logout
-                        </a>
-                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                        </form>
+            <div class="der">
+                @if (Route::has('login'))
+                <div class="top-left links">
+                    <a href="{{ url('/home') }}">Home</a>
+                    <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
                 </div>
-            @endif
+                @endif
+            </div>
+        
+    </header>
+
+    <div class="barra">
+        <nav id="nav" class="navegacion-principal contenedor">
+            <a href="{{ url('/reports') }}">Reports</a>
+            <a href="{{ url('/statistics') }}">Statistics</a>
+            <a href="{{ url('/estimates') }}">Estimate</a>
+            <a href="{{ url('/analysis') }}">Analysis</a>
+        </nav>
+    </div>
+
+    <div class="top-left">
+        <div class="content">
+            <div class="title m-b-md">
+                Help
+            </div>
         </div>
+    </div>
+
+    <main>
+    </main>
+        
     </body>
 </html>

@@ -1,3 +1,10 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 html, body {
     background-color: #fff;
     color: #636b6f;
@@ -7,36 +14,74 @@ html, body {
     margin: 0;
 }
 
-.full-height {
-    height: 100vh;
+header{
+    background-color: rgb(177, 163, 37);
+    overflow: hidden;
 }
 
-.flex-center {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
 
-.position-ref {
-    position: relative;
-}
-
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
+.clearfix::after {
+    content:'';
+    clear: both;
+    display: block;
 }
 
 .content {
     text-align: center;
 }
 
+
+/** Navegación Responsive **/
+.navegacion-principal {
+    transition: .5s;
+    max-height: unset;
+}
+
+/*Header*/
+.izq{
+    float: left;
+    width: 50%;
+}
+
+.der{
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+/** Navegacion **/
+.barra {
+    background-color: rgb(177, 163, 37);
+    text-align: left;
+}
+.navegacion-principal a {
+    color: #000000;
+    font-weight: bold;  
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    text-align: right;
+    padding: 20px;
+}
+
+.navegacion-principal a{
+    display: inline-block;
+}
+
+.navegacion-principal a:hover {
+    background-color: rgb(255, 255, 255);
+    color:  rgb(177, 163, 37);
+    font-weight: bold;
+    transition: 0.4s;
+}
+
 .title {
     font-size: 84px;
+    display: inline-block;
 }
 
 .links > a {
-    color: #636b6f;
+    color: #000000;
     padding: 0 25px;
     font-size: 12px;
     font-weight: 600;
@@ -47,4 +92,18 @@ html, body {
 
 .m-b-md {
     margin-bottom: 30px;
+}
+
+/**Textos**/
+
+h1{
+    text-align: center;
+    font-size: 84px;
+    display: inlane;
+}
+
+h3{
+    margin: 0;
+    display: inline;
+    color: #000000;
 }
