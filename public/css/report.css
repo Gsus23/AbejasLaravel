@@ -1,0 +1,54 @@
+/*Main y contenedores asociados*/
+
+main{
+    overflow: hidden;
+}
+
+.fecha-contenedor{
+    text-align: center;
+    float: left;
+    width: 50%;
+    padding: 0 100px 0 50px;
+}
+
+.fecha{
+	margin-top: 100px;
+}
+
+.reporte{
+    float: right;
+	width: 50%;
+	padding: 10px 0;  
+}
+
+/*Tabla (Filas y columnas)*/
+
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 90%;
+}
+
+th, td{
+	padding: 20px;
+	font-weight: bold;
+}
+
+thead{
+	background-color: #ebd13fec;
+	border-bottom: solid 5px #f8d302;
+	color: black;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: #e7e416;
+	color: black;
+}
+
+/*Boton*/
+

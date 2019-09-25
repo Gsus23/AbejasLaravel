@@ -11,7 +11,8 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="css/normalize.css" type="text/css">
-        <link rel="stylesheet" href="css/reports.css" type="text/css">
+        <link rel="stylesheet" href="css/base.css" type="text/css">
+        <link rel="stylesheet" href="css/report.css" type="text/css">
        
     
     </head>
@@ -23,8 +24,8 @@
             <div class="der">
                 @if (Route::has('login'))
                 <div class="top-left links">
-                    <a href="{{ url('/home') }}">Home</a>
-                    <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                    <a href="{{ url('/home') }}" class="boton-header">Home</a>
+                    <a href="{{ url('/logout') }}" class="boton-header"  onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         Logout
                     </a>
@@ -54,8 +55,43 @@
         </div>
     </div>
 
-    <main>
+    <main> 
+        <div class="fecha-contenedor">
+            <label class="fecha" for="fecha">Date: </label>
+            <input class="fecha" type="date" name="fecha">
+            <br>
+
+            <a id="exportar-todo" class="boton" href="">Export all</a>
+        </div>
+
+        <div class="reporte">
+        <table>
+			<thead>
+				<tr>
+					<th>Id</th><th>Schedule</th><th>Export to PDF</th>
+				</tr>
+			</thead>
+
+			<tr>
+				<td>1</td><td>12pm-6am</td><td><a class="boton" href="">Export</a></td>
+			</tr>
+			<tr>
+				<td>2</td><td>6am-12am</td><td><a class="boton" href="">Export</a></td>
+			</tr>
+			<tr>
+				<td>3</td><td>12am-6pm</td><td><a class="boton" href="">Export</a></td>
+			</tr>
+			<tr>
+				<td>4</td><td>6pm-12pm</td><td><a class="boton" href="">Export</a></td>
+			</tr>
+		</table>
+        </div>
     </main>
+
+    <footer>
+        
+    </footer>
+
         
     </body>
 </html>
