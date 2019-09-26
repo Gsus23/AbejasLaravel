@@ -1,4 +1,20 @@
 <!DOCTYPE html>
+<?php
+
+$host="127.0.0.1";
+$username="BeeLab";
+$password="abejas12345";
+$database="beelab";
+
+$conexion = new mysqli($host, $username, $password, $database);
+if ($conexion -> connect_errno) {
+    die("Falló la conexion:(".$conexion -> mysqli_connect_errno().")".$conexion->mysqli_connect_error());
+}
+
+?>
+
+
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -85,17 +101,33 @@
         Highcharts.chart('container', {
 
             title: {
-                text: 'Solar Employment Growth by Sector, 2010-2016'
+                text: 'Temperature'
             },
 
-            subtitle: {
-                text: 'Source: thesolarfoundation.com'
-            },
+            
 
             yAxis: {
                 title: {
-                    text: 'Number of Employees'
+                    text: 'Temperature'
                 }
+            },
+
+            xAxis: {
+                
+                Categories:[
+                <?php
+                $sql="SELECT * FROM clima_ambiente";    
+                $result=mysqli_query($conexion,$sql);
+                while($consulta=mysqli_fetch_array($result))
+                {    
+                ?>
+                '<?php echo $consulta['id'] ?>',
+                <?php
+                }
+                ?>
+
+                ]
+
             },
             legend: {
                 layout: 'vertical',
@@ -108,25 +140,27 @@
                     label: {
                         connectorAllowed: false
                     },
-                    pointStart: 2010
+                    pointStart: 0
                 }
             },
 
             series: [{
-                name: 'Installation',
-                data: [43934, 52503, 57177, 69658, 97031, 119931]
-            }, {
-                name: 'Manufacturing',
-                data: [24916, 24064, 29742, 29851, 32490, 30282]
-            }, {
-                name: 'Sales & Distribution',
-                data: [11744, 17722, 16005, 19771, 20185, 24377]
-            }, {
-                name: 'Project Development',
-                data: [null, null, 7988, 12169, 15112, 22452]
-            }, {
-                name: 'Other',
-                data: [12908, 5948, 8105, 11248, 8989, 11816]
+                name: 'Temperature',
+                data: [
+
+                <?php
+
+                $sql="SELECT * FROM clima_ambiente";    
+                $result=mysqli_query($conexion,$sql);
+                while($consulta1=mysqli_fetch_array($result))
+                {    
+                ?>
+                <?php echo $consulta1['temperatura'] ?>,
+                <?php
+                }
+                ?>              
+                ]
+
             }],
 
             responsive: {
