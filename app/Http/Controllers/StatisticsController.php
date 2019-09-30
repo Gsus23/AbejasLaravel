@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+
+
 class StatisticsController extends Controller
 {
     /**
@@ -25,4 +28,8 @@ class StatisticsController extends Controller
     {
         return view('statistics');
     }
+
+
+
 }
+

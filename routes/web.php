@@ -23,6 +23,7 @@ Route::get('/analysis', 'AnalysisController@index');
 Route::get('/help', 'HelpController@index');
 Route::get('/imprimir', 'Controller@imprimir');
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

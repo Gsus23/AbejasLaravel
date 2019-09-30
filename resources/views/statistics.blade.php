@@ -12,7 +12,22 @@ if ($conexion -> connect_errno) {
 }
 
 ?>
-
+ <?php
+ function funcionConsulta($valueTemp){
+                
+                $sql="SELECT c.id,c.temperatura,a.id,a.entrada,c.apiario_id,a.apiario_id
+                    FROM clima_ambiente c 
+                    INNER JOIN actividad a ON a.apiario_id=c.apiario_id
+                    WHERE c.temperatura=$valueTemp";    
+                $result=mysqli_query($conexion,$sql);
+                
+                while($consulta1=mysqli_fetch_array($result))
+                {    
+                    $consulta1[entrada];
+                }
+                echo $consulta1;
+ }
+?>
 
 
 <html lang="en">
@@ -32,6 +47,7 @@ if ($conexion -> connect_errno) {
         <script src="plugins/highcharts/code/modules/series-label.js"></script>
         <script src="plugins/highcharts/code/modules/exporting.js"></script>
         <script src="plugins/highcharts/code/modules/export-data.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -74,110 +90,128 @@ if ($conexion -> connect_errno) {
 
     <main>
     <div class="recopilacion">
+        
         <fieldset class="datos-basicos" >
             <legend>Basic data</legend>
+            
+            <form id="formulario">
             <label name="temperatura">Temperature</label>
             <br>    
-            <input type="text" name="temperatura" placeholder="Example: 30">
+            <input type="text" name="temperatura" id="temperatura" placeholder="Example: 30" required="required">
             <br> <br>
             <label name="humedad">Humidity</label>
             <br>    
-            <input type="text" name="humedad" placeholder="Example: 30">
+            <input type="text" name="humedad" id="humedad" placeholder="Example: 30" required="required">
             <br> <br>
             <label name="temperatura-apiario">Apiary temperature</label>
             <br>    
-            <input type="text" name="temperatura-apiario" placeholder="Example: 30">
+            <input type="text" name="temperatura_apiario" id="apiario" placeholder="Example: 30" required="required">
             <br> <br>
-
-            <button id="analizar" type="submit">Analyze</button>
+            <br>    
+            <input type="submit" onclick="verOcultar()" value="Ver">
+            <br> <br>
+            </form>
+            
+            
+            
         </fieldset>
+      
         <a href="#" class="boton">Export all</a>
     </div>
+    
+    
+
     <div class="estadisticas">
 
-        <div id="container"></div>
+        <div id="container" ></div>
 
-		<script type="text/javascript">
-        Highcharts.chart('container', {
+		<script type="text/javascript" id="grafica">
 
-            title: {
-                text: 'Temperature'
-            },
+                
+                function verOcultar(){
+                    
+                    //document.getElementById('container').style.visibility='hidden';
+                    var form = document.getElementById('formulario');
+                    
+                                     
+
+                    formulario.addEventListener('submit', function(e){
+                        e.preventDefault()
+                        var temp = document.getElementById("temperatura").value;
+                        var hum = document.getElementById("humedad").value;
+                        var tempAp = document.getElementById("apiario").value;
+
+
+
+                         if (temp > 0 ) {
+
+                    Highcharts.chart('container', {
+
+                        title: {
+                            text: 'Temperature'
+                        },
 
             
 
-            yAxis: {
-                title: {
-                    text: 'Temperature'
-                }
-            },
+                        yAxis: {
+                            Categories:[
 
-            xAxis: {
-                
-                Categories:[
-                <?php
-                $sql="SELECT * FROM clima_ambiente";    
-                $result=mysqli_query($conexion,$sql);
-                while($consulta=mysqli_fetch_array($result))
-                {    
-                ?>
-                '<?php echo $consulta['id'] ?>',
-                <?php
-                }
-                ?>
+                            echo funcionConsulta(temp)
+                            ]
+                        },
 
-                ]
+                        xAxis: {
+                            
+                             minPadding: 0.05,
+                             maxPadding: 0.05
 
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle'
-            },
-
-            plotOptions: {
-                series: {
-                    label: {
-                        connectorAllowed: false
-                    },
-                    pointStart: 0
-                }
-            },
-
-            series: [{
-                name: 'Temperature',
-                data: [
-
-                <?php
-
-                $sql="SELECT * FROM clima_ambiente";    
-                $result=mysqli_query($conexion,$sql);
-                while($consulta1=mysqli_fetch_array($result))
-                {    
-                ?>
-                <?php echo $consulta1['temperatura'] ?>,
-                <?php
-                }
-                ?>              
-                ]
-
-            }],
-
-            responsive: {
-                rules: [{
-                    condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
+                        },
                         legend: {
-                            enabled: false
+                            layout: 'vertical',
+                            align: 'right',
+                            verticalAlign: 'middle'
+                        },
+
+                        plotOptions: {
+                            series: {
+                                label: {
+                                    connectorAllowed: false
+                                },
+                                pointStart: 0
+                            }
+                        },
+
+                        series: [{
+                            name: 'Temperature',
+                            data: [
+                            
+                              echo funcionConsulta(temp)
+                            ]
+
+                        }],
+
+                        responsive: {
+                            rules: [{
+                                condition: {
+                                    maxWidth: 500
+                                },
+                                chartOptions: {
+                                    legend: {
+                                        enabled: false
+                                    }
+                                }
+                            }]
                         }
-                    }
-                }]
-            }
-        });
+                    }); 
+                    } 
+                        
+
+                     });            
+                }
+        
                 </script>
             </div> 
         </main>
+        <script type="text/javascript"></script>
     </body>
 </html>
