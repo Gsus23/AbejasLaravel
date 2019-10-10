@@ -10,8 +10,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/estimates.css" type="text/css">
+        <link rel="stylesheet" href="css/base.css" type="text/css">
         
-    </head>
+    </head> 
     <body>
         <header>
             <div class="izq">
@@ -20,8 +21,8 @@
             <div class="der">
                 @if (Route::has('login'))
                 <div class="top-left links">
-                    <a href="{{ url('/home') }}">Home</a>
-                    <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+                    <a href="{{ url('/home') }}" class="boton-header">Home</a>
+                    <a href="{{ url('/logout') }}"  class="boton-header"onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         Logout
                     </a>
@@ -38,6 +39,7 @@
         <nav id="nav" class="navegacion-principal contenedor">
             <a href="{{ url('/reports') }}">Reports</a>
             <a href="{{ url('/statistics') }}">Statistics</a>
+            <a href="{{ url('/estimates') }}">Estimate</a>
             <a href="{{ url('/analysis') }}">Analysis</a>
             <a href="{{ url('/help') }}">Help</a>
         </nav>

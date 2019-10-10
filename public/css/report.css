@@ -1,7 +1,7 @@
 /*Main y contenedores asociados*/
 
 main{
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .fecha-contenedor{
@@ -23,7 +23,7 @@ main{
 
 /*Tabla (Filas y columnas)*/
 
-table{
+table{ 
 	background-color: white;
 	text-align: left;
 	border-collapse: collapse;
@@ -46,9 +46,9 @@ tr:nth-child(even){
 }
 
 tr:hover td{
-	background-color: #e7e416;
+	background-color: #929132;
+	transition: .8s;
 	color: black;
 }
 
-/*Boton*/
 

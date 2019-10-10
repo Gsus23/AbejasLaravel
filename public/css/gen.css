@@ -1,0 +1,33 @@
+header{
+    text-align: center; 
+}
+
+fieldset{
+    border-radius: 80%;
+}
+
+/*Tabla datos ambientales */
+
+.tabla-amb{
+    padding-left: 50px;
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.tabla-amb th, td{
+    padding: 0px 20px;
+    font-weight: bold;
+}
+
+.tabla-amb thead{
+    background-color: #ebd13fa4;
+    border-bottom: solid 5px #000000c9;
+    color: black;
+}
+
+.tabla-amb tr:nth-child(even){
+    background-color: #ddd;
+}
+

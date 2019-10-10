@@ -1,36 +1,8 @@
 <!DOCTYPE html>
-<?php
-
-$host="127.0.0.1";
-$username="BeeLab";
-$password="abejas12345";
-$database="beelab";
-
-$conexion = new mysqli($host, $username, $password, $database);
-if ($conexion -> connect_errno) {
-    die("Falló la conexion:(".$conexion -> mysqli_connect_errno().")".$conexion->mysqli_connect_error());
-}
-
-?>
- <?php
- function funcionConsulta($valueTemp){
-                
-                $sql="SELECT c.id,c.temperatura,a.id,a.entrada,c.apiario_id,a.apiario_id
-                    FROM clima_ambiente c 
-                    INNER JOIN actividad a ON a.apiario_id=c.apiario_id
-                    WHERE c.temperatura=$valueTemp";    
-                $result=mysqli_query($conexion,$sql);
-                
-                while($consulta1=mysqli_fetch_array($result))
-                {    
-                    $consulta1[entrada];
-                }
-                echo $consulta1;
- }
-?>
-
 
 <html lang="en">
+
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,8 +19,16 @@ if ($conexion -> connect_errno) {
         <script src="plugins/highcharts/code/modules/series-label.js"></script>
         <script src="plugins/highcharts/code/modules/exporting.js"></script>
         <script src="plugins/highcharts/code/modules/export-data.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        
+       
+        
     </head>
+
+    <?php 
+    $num = "123";
+    ?>
     <body>
         <header>
             <div class="izq">
@@ -74,9 +54,13 @@ if ($conexion -> connect_errno) {
     <div class="barra">
         <nav id="nav" class="navegacion-principal contenedor">
             <a href="{{ url('/reports') }}">Reports</a>
+            <a href="{{ url('/statistics') }}">Statistics</a>
             <a href="{{ url('/estimates') }}">Estimate</a>
             <a href="{{ url('/analysis') }}">Analysis</a>
             <a href="{{ url('/help') }}">Help</a>
+           
+            
+        
         </nav>
     </div>
 
@@ -94,7 +78,12 @@ if ($conexion -> connect_errno) {
         <fieldset class="datos-basicos" >
             <legend>Basic data</legend>
             
-            <form id="formulario">
+<<<<<<< HEAD
+            <form id="formulario" >
+=======
+            <form id="formulario" method="POST" action="{{url('statistics')}}" >
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+>>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
             <label name="temperatura">Temperature</label>
             <br>    
             <input type="text" name="temperatura" id="temperatura" placeholder="Example: 30" required="required">
@@ -107,34 +96,28 @@ if ($conexion -> connect_errno) {
             <br>    
             <input type="text" name="temperatura_apiario" id="apiario" placeholder="Example: 30" required="required">
             <br> <br>
-            <br>    
-            <input type="submit" onclick="verOcultar()" value="Ver">
-            <br> <br>
+            <input type="submit" name="submit" value="See">
+            <br><br>
+               
             </form>
-            
-            
-            
-        </fieldset>
-      
-        <a href="#" class="boton">Export all</a>
-    </div>
-    
-    
+            <span></span>
 
-    <div class="estadisticas">
+        </fieldset>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
+    </div>
+     <div class="estadisticas">
 
         <div id="container" ></div>
 
-		<script type="text/javascript" id="grafica">
 
-                
-                function verOcultar(){
-                    
-                    //document.getElementById('container').style.visibility='hidden';
-                    var form = document.getElementById('formulario');
-                    
-                                     
+        <script type="text/javascript">
+           
+        </script>
 
+<<<<<<< HEAD
                     formulario.addEventListener('submit', function(e){
                         e.preventDefault()
                         var temp = document.getElementById("temperatura").value;
@@ -156,7 +139,6 @@ if ($conexion -> connect_errno) {
                         yAxis: {
                             Categories:[
 
-                            echo funcionConsulta(temp)
                             ]
                         },
 
@@ -185,7 +167,6 @@ if ($conexion -> connect_errno) {
                             name: 'Temperature',
                             data: [
                             
-                              echo funcionConsulta(temp)
                             ]
 
                         }],
@@ -205,13 +186,12 @@ if ($conexion -> connect_errno) {
                     }); 
                     } 
                         
+=======
+        </div> 
+         
+    
+>>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
 
-                     });            
-                }
-        
-                </script>
-            </div> 
         </main>
-        <script type="text/javascript"></script>
     </body>
 </html>

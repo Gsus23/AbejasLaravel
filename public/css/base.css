@@ -11,10 +11,10 @@ html {
 }
 *, *:before, *:after {
     box-sizing: inherit;
-}
+}   
 
 html, body {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #000000;
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
@@ -40,6 +40,7 @@ header{
 .izq{
     float: left;
     width: 50%;
+    height: 22px;
 }
 
 .der{
@@ -75,31 +76,7 @@ header{
     background-color: rgb(255, 255, 255);
     color:  rgb(177, 163, 37);
     font-weight: bold;
-    transition: 0.4s;
-}
-
-/*Cofiguraciones de Larevel predefinidas*/
-.title {
-    font-size: 84px;
-    display: inline-block;
-}
-
-.links > a {
-    color: #000000;
-    padding: 0 25px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.m-b-md {
-    margin-bottom: 30px;
-}
-
-.content {
-    text-align: center;
+    transition: .4s;
 }
 
 /*Home y logout*/
@@ -138,6 +115,7 @@ label{
 
 .boton:hover {
     background-color: rgba(190, 176, 48, 0.863);
+    transition: .4s;
 }
 
 #exportar-todo{
@@ -147,4 +125,27 @@ label{
 
 footer{
     margin-top: 50px;
+}
+
+/*Datos predefinidos*/
+
+.links a {
+    color: #000000;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+} 
+
+.title {
+    font-size: 84px;
+}
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.content {
+    text-align: center;
 }

@@ -11,6 +11,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/welcome.css"  type="text/css">
+        <link rel="stylesheet" href="css/base.css"  type="text/css">
         
     </head>
     <body>
@@ -18,11 +19,11 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" class="boton-w">Home</a>
                         
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>     
+                        <a href="{{ url('/login') }}" class="boton-w">Login</a>
+                        <a href="{{ url('/register') }}" class="boton-w">Register</a>     
                     @endif
                 </div>
             @endif
