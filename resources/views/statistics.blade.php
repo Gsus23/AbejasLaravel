@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 
 <html lang="en">
 
 
+=======
+
+<html lang="en">
+
+
+>>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,7 +86,12 @@
             <legend>Basic data</legend>
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             <form id="formulario" >
+=======
+            <form id="formulario" method="POST" action="{{url('statistics')}}" >
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+>>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
 =======
             <form id="formulario" method="POST" action="{{url('statistics')}}" >
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -104,7 +116,10 @@
 
         </fieldset>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
 =======
 >>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
     </div>
@@ -117,6 +132,7 @@
            
         </script>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     formulario.addEventListener('submit', function(e){
                         e.preventDefault()
@@ -186,6 +202,11 @@
                     }); 
                     } 
                         
+=======
+        </div> 
+         
+    
+>>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
 =======
         </div> 
          
