@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +11,7 @@
 */
 
 Route::get('/', function () {
+
     return view('welcome');
 });
 
@@ -22,11 +22,14 @@ Route::get('/estimates', 'EstimateController@index');
 Route::get('/analysis', 'AnalysisController@index');
 Route::get('/help', 'HelpController@index');
 Route::get('/imprimir', 'Controller@imprimir');
+Route::name('consultar')->get('/consultar','Controller@consultar');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::post('/statistics', 'StatisticsController@store');
 
 
 
