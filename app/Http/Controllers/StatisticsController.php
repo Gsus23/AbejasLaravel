@@ -27,16 +27,20 @@ class StatisticsController extends Controller
      */
     public function index()
     {
+        
         return view('statistics');
     }
 
     public function store(){
 
-        $variable=$_POST['temperatura'];              
-        $actividades = DB::table('actividad')->join('clima_ambiente','actividad.apiario_id','=','clima_ambiente.apiario_id')->where('clima_ambiente.temperatura',$variable)->get();
+                    
+        $actividades = DB::table('actividad')->join('clima_ambiente','actividad.apiario_id','=','clima_ambiente.apiario_id')->where('clima_ambiente.temperatura',16)->get();
         
+        $user = ['h' , 'j'];
       
-        return view('statistics',compact('actividades'));
+        return view('analysis',[
+            'user' => $user
+        ]);
 
 
     }

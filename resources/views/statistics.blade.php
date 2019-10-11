@@ -26,9 +26,7 @@
         
     </head>
 
-    <?php 
-    $num = "123";
-    ?>
+
     <body>
         <header>
             <div class="izq">
@@ -101,14 +99,14 @@
     </div>
      <div class="estadisticas">
 
-        <div id="container" ></div>
-
-
+        <div id="container" >
+        
+        </div>
         <script type="text/javascript">
            
         </script>
 
-        </div> 
+    </div> 
          
     
 

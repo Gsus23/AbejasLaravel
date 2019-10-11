@@ -23,6 +23,7 @@ class AnalysisController extends Controller
      */
     public function index()
     {
+        
         return view('analysis');
     }
 }
