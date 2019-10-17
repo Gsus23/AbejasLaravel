@@ -67,40 +67,40 @@
 
                 <button type="submit"id="boton_general" class="boton">Export all</button>
             </div>
-        </form>
         
 
-        <div class="reporte">
-        <table>
-            <thead>
+            <div class="reporte">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th><th>Schedule</th><th>Export to PDF</th>
+                    </tr>
+                </thead>
+
                 <tr>
-                    <th>Id</th><th>Schedule</th><th>Export to PDF</th>
+                    <td>1</td>
+                    <td>12am - 6am</td>
+                    <td><button id="boton_hora_1" type="submit" class="boton">Export</button></td>
                 </tr>
-            </thead>
-
-            <tr>
-                <td>1</td>
-                <td>12am - 6am</td>
-                <td><button id="boton_hora_1">Export</button></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>6am - 12pm</td>
-                <td><button id="boton_hora_2">Export</button></td></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>12pm - 6pm</td>
-                <td><button id="boton_hora_3">Export</button></td></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>6pm - 12am</td>
-                <td><button id="boton_hora_4">Export</button></td></td>
-            </tr>
-        </table>
-        
-        </div>
+                <tr>
+                    <td>2</td>
+                    <td>6am - 12pm</td>
+                    <td><button id="boton_hora_2" type="submit" class="boton">Export</button></td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>12pm - 6pm</td>
+                    <td><button id="boton_hora_3" type="submit" class="boton">Export</button></td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>6pm - 12am</td>
+                    <td><button id="boton_hora_4" type="submit" class="boton">Export</button></td></td>
+                </tr>
+            </table>
+            
+            </div>
+            </form>
     </main>
    
     <footer>

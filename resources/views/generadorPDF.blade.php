@@ -9,6 +9,7 @@
         $ubicacion = $datos->url;
     }
     
+    $hora = '10am';
     $var1= '5';
     $var2= '10';
 ?>
@@ -23,6 +24,7 @@
         <header>
             <h1>Measurement document</h1>
             <h3>Seccion para la descripcion del documento.</h3>
+            <h4>Hora: <?php echo $hora ?></h4>
         </header>
 
         <main>

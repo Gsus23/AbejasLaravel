@@ -7,14 +7,6 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Illuminate\Support\Facades\DB;
->>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
-=======
-use Illuminate\Support\Facades\DB;
->>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
 
 class Controller extends BaseController
 {
