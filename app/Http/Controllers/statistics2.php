@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class AnalysisController extends Controller
+class statistics2 extends Controller
 {
-    /**
+    
+	/**
      * Create a new controller instance.
      *
      * @return void
@@ -24,6 +26,7 @@ class AnalysisController extends Controller
     public function index()
     {
         
-        return view('analysis');
+        return view('statistics2');
     }
 }
+

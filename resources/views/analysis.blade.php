@@ -49,7 +49,7 @@
     <div class="top-left">
         <div class="content">
             <div class="title m-b-md">
-                Analysis
+                
             </div>
         </div>
     </div>

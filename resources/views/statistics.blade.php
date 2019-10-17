@@ -1,15 +1,8 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 
 <html lang="en">
 
 
-=======
-
-<html lang="en">
-
-
->>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,9 +26,7 @@
         
     </head>
 
-    <?php 
-    $num = "123";
-    ?>
+
     <body>
         <header>
             <div class="izq">
@@ -61,7 +52,6 @@
     <div class="barra">
         <nav id="nav" class="navegacion-principal contenedor">
             <a href="{{ url('/reports') }}">Reports</a>
-            <a href="{{ url('/statistics') }}">Statistics</a>
             <a href="{{ url('/estimates') }}">Estimate</a>
             <a href="{{ url('/analysis') }}">Analysis</a>
             <a href="{{ url('/help') }}">Help</a>
@@ -85,17 +75,8 @@
         <fieldset class="datos-basicos" >
             <legend>Basic data</legend>
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <form id="formulario" >
-=======
             <form id="formulario" method="POST" action="{{url('statistics')}}" >
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
->>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
-=======
-            <form id="formulario" method="POST" action="{{url('statistics')}}" >
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
->>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
             <label name="temperatura">Temperature</label>
             <br>    
             <input type="text" name="temperatura" id="temperatura" placeholder="Example: 30" required="required">
@@ -115,103 +96,12 @@
             <span></span>
 
         </fieldset>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
-=======
->>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
     </div>
-     <div class="estadisticas">
+    <div class="estadisticas">
 
-        <div id="container" ></div>
-
-
-        <script type="text/javascript">
-           
-        </script>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    formulario.addEventListener('submit', function(e){
-                        e.preventDefault()
-                        var temp = document.getElementById("temperatura").value;
-                        var hum = document.getElementById("humedad").value;
-                        var tempAp = document.getElementById("apiario").value;
-
-
-
-                         if (temp > 0 ) {
-
-                    Highcharts.chart('container', {
-
-                        title: {
-                            text: 'Temperature'
-                        },
-
-            
-
-                        yAxis: {
-                            Categories:[
-
-                            ]
-                        },
-
-                        xAxis: {
-                            
-                             minPadding: 0.05,
-                             maxPadding: 0.05
-
-                        },
-                        legend: {
-                            layout: 'vertical',
-                            align: 'right',
-                            verticalAlign: 'middle'
-                        },
-
-                        plotOptions: {
-                            series: {
-                                label: {
-                                    connectorAllowed: false
-                                },
-                                pointStart: 0
-                            }
-                        },
-
-                        series: [{
-                            name: 'Temperature',
-                            data: [
-                            
-                            ]
-
-                        }],
-
-                        responsive: {
-                            rules: [{
-                                condition: {
-                                    maxWidth: 500
-                                },
-                                chartOptions: {
-                                    legend: {
-                                        enabled: false
-                                    }
-                                }
-                            }]
-                        }
-                    }); 
-                    } 
-                        
-=======
-        </div> 
+    </div> 
          
     
->>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
-=======
-        </div> 
-         
-    
->>>>>>> 13fc306447caaeb6437ade16f0f3ec779f90c2f5
 
         </main>
     </body>
