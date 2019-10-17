@@ -47,15 +47,7 @@
     <div class="top-left">
         <div class="content">
             <div class="title m-b-md">
-                Analysis
-                <div>
-                <ul>
-                <?php foreach ($user as $user): ?>
-                <li><?php echo $user ?></li>
-                    
-                <?php endforeach ?>
-                </ul>
-                </div>
+                
             </div>
         </div>
     </div>

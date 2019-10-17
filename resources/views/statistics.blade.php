@@ -97,14 +97,7 @@
 
         </fieldset>
     </div>
-     <div class="estadisticas">
-
-        <div id="container" >
-        
-        </div>
-        <script type="text/javascript">
-           
-        </script>
+    <div class="estadisticas">
 
     </div> 
          
