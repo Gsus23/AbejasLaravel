@@ -15,14 +15,14 @@
 ?>
     <head>
         <meta charset="UTF-8">
-        <title>Bee document</title>
+        <title>Documento de abejas</title>
         <link rel="stylesheet" href="css/gen.css" type="text/css">
         <script src="js/jquery.js" type="text/javascript"></script>
         <script src="js/reports.js" type="text/javascript"></script>
     </head>
     <body>
         <header>
-            <h1>Measurement document</h1>
+            <h1>Reporte de medición</h1>
             <h3>Seccion para la descripcion del documento.</h3>
             <h4>Hora: <?php echo $hora ?></h4>
         </header>
@@ -54,9 +54,8 @@
 
                     <fieldset  class="apiario-ambiente">
                         <legend>Datos obtenidos</legend>
-                        <h4>En esta sección se presentan los datos recopilados mediante el uso de una estación 
-                            meterologica que proporciona dicha información.
-                        </h4>
+                        <h4>En esta sección se presentan los datos recopilados mediante el uso de sensores 
+                            ubicados dentro del apiario.</h4>
                         <table class="tabla-amb">
                             <thead>
                                 <tr>
@@ -78,7 +77,7 @@
                 <div class="ambiente-datos">
                     <fieldset>
                         <legend>Datos climaticos</legend>
-                        <h4>A continuacion se presentan los datos recopilados de la estacion meteorologica cercana al apiario.</h4>
+                        <h4>A continuacion se presentan los datos recopilados por la estacion meteorologica cercana al apiario.</h4>
                         <table class="tabla-amb">
                             <thead>
                                 <tr>
