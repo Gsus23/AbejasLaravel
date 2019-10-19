@@ -52,3 +52,29 @@ tr:hover td{
 }
 
 
+/*Items especificos*/
+
+h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*Boton exportar todo*/
+
+
+.boton-general{
+    background-color: rgb(177, 163, 37);
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+	font-weight: bold;
+	margin-top: 10px;
+    font-size: 18px;
+    border-radius: 13%;
+    transition: background-color .3s ease-in-out;
+}
+
+.boton-general:hover {
+    background-color: rgba(190, 176, 48, 0.863);
+    transition: .4s;
+}

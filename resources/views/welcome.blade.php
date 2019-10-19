@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>the bees´s world</title>
+        <title>El mundo de las abejas</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -22,15 +22,15 @@
                         <a href="{{ url('/home') }}" class="boton-w">Home</a>
                         
                     @else
-                        <a href="{{ url('/login') }}" class="boton-w">Login</a>
-                        <a href="{{ url('/register') }}" class="boton-w">Register</a>     
+                        <a href="{{ url('/login') }}" class="boton-w">Ingresar</a>
+                        <a href="{{ url('/register') }}" class="boton-w">Registrar</a>     
                     @endif
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome to the bees´s world.
+                    Bienvenido al mundo de las abejas
                 </div>
             </div>
         </div>

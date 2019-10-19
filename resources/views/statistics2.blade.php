@@ -21,24 +21,21 @@
         <script src="plugins/highcharts/code/modules/export-data.js"></script>
         
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        
-       
-        
     </head>
 
 
     <body>
         <header>
             <div class="izq">
-                <h3>Bee Lab - statistics</h3>
+                <h3 class="titulo">Bee Lab - Estadisticas</h3>
             </div>
             <div class="der">
                 @if (Route::has('login'))
                 <div class="top-left links">
-                    <a href="{{ url('/home') }}" class="boton-header">Home</a>
+                    <a href="{{ url('/home') }}" class="boton-header">Inicio</a>
                     <a href="{{ url('/logout') }}" class="boton-header" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
-                        Logout
+                        Salir
                     </a>
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
@@ -47,111 +44,95 @@
                 @endif
             </div>
         
-    </header>
+        </header>
 
-    <div class="barra">
-        <nav id="nav" class="navegacion-principal contenedor">
-            <a href="{{ url('/reports') }}">Reports</a>
-            <a href="{{ url('/estimates') }}">Estimate</a>
-            <a href="{{ url('/analysis') }}">Analysis</a>
-            <a href="{{ url('/help') }}">Help</a>
-            <a href="{{ url('/statistics') }}">Back</a>
-           
-            
-        
-        </nav>
-    </div>
+        <div class="barra">
+            <nav id="nav" class="navegacion-principal contenedor">
+                <a href="{{ url('/reports') }}">Reportes</a>
+                <a href="{{ url('/statistics') }}">Estadisticas</a>
+                <a href="{{ url('/estimates') }}">Estimaciones</a>
+                <a href="{{ url('/analysis') }}">Analisis</a>
+                <a href="{{ url('/help') }}">Ayudas</a>
+            </nav>
+        </div>
 
-    <div class="top-left">
-        <div class="content">
-            <div class="title m-b-md">
-                Statistics
+        <div class="top-left">
+            <div class="content">
+                <div class="title m-b-md">
+                    Estadisticas
+                </div>
             </div>
         </div>
-    </div>
 
-    <main>
-    <div class="estadisticas">
-
-        <div id="container" >
-        <div>
-                
-                
-        </div>
-        </div >
-        <div class="right">
-        <script type="text/javascript">
-           Highcharts.chart('container', {
-                        title: {
-                            text: 'Temperature'
-                        },
-            
-                        yAxis: {
-
-                        },
-                        legend: {
-                            layout: 'vertical',
-                            align: 'right',
-                            verticalAlign: 'middle'
-                        },
-                        plotOptions: {
-                            series: {
-                                label: {
-                                    connectorAllowed: false
+        <main>
+            <div id="container" ><div>
+                    
+            <div class="grafica">
+                <script type="text/javascript">
+                Highcharts.chart('container', {
+                                title: {
+                                    text: 'Temperatura'
                                 },
-                                pointStart: 0
-                            }
-                        },
-                        series: [{
-                            name: 'Temperature',
-                            data: [
-                                
-                                <?php foreach ($consulta as $con): ?>
-                                [<?php echo $con ?>],
-                                <?php endforeach ?>
-                                
-                            ]
-                        },{
-                            name: 'Humidity',
-                            data: [
-                                
-                                <?php foreach ($consulta1 as $con1): ?>
-                                [<?php echo $con1 ?>],
-                                <?php endforeach ?>
-                                
-                            ]
-                        },{
-                            name: 'Apiary temperature ',
-                            data: [
-                                
-                                <?php foreach ($consulta2 as $con2): ?>
-                                [<?php echo $con2 ?>],
-                                <?php endforeach ?>
-                                
-                            ]
-
-                        }],
-                        responsive: {
-                            rules: [{
-                                condition: {
-                                    maxWidth: 500
+                    
+                                yAxis: {
+                                    text: 'Actividad'
                                 },
-                                chartOptions: {
-                                    legend: {
-                                        enabled: false
+                                legend: {
+                                    layout: 'vertical',
+                                    align: 'right',
+                                    verticalAlign: 'middle'
+                                },
+                                plotOptions: {
+                                    series: {
+                                        label: {
+                                            connectorAllowed: false
+                                        },
+                                        pointStart: 0
                                     }
+                                },
+                                series: [{
+                                    name: 'Temperatura',
+                                    data: [
+                                        
+                                        <?php foreach ($consulta as $con): ?>
+                                        [<?php echo $con ?>],
+                                        <?php endforeach ?>
+                                        
+                                    ]
+                                },{
+                                    name: 'Humedad',
+                                    data: [
+                                        
+                                        <?php foreach ($consulta1 as $con1): ?>
+                                        [<?php echo $con1 ?>],
+                                        <?php endforeach ?>
+                                        
+                                    ]
+                                },{
+                                    name: 'Temperatura apiario',
+                                    data: [
+                                        
+                                        <?php foreach ($consulta2 as $con2): ?>
+                                        [<?php echo $con2 ?>],
+                                        <?php endforeach ?>
+                                        
+                                    ]
+                                }],
+                                responsive: {
+                                    rules: [{
+                                        condition: {
+                                            maxWidth: 500
+                                        },
+                                        chartOptions: {
+                                            legend: {
+                                                enabled: false
+                                            }
+                                        }
+                                    }]
                                 }
-                            }]
-                        }
-                    }); 
-        </script>
-        </div>
-        
-
-    </div> 
-         
-    
-
+                            }); 
+                </script>
+            </div>
         </main>
     </body>
 </html>

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Help</title>
+        <title>Ayudas</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -15,15 +15,15 @@
     <body>
         <header>
             <div class="izq">
-                <h3>Bee Lab - help</h3>
+                <h3 class="titulo">Bee Lab - Ayudas</h3>
             </div>
             <div class="der">
                 @if (Route::has('login'))
                 <div class="top-left links">
-                    <a href="{{ url('/home') }}" class="boton-header">Home</a>
+                    <a href="{{ url('/home') }}" class="boton-header">Inicio</a>
                     <a href="{{ url('/logout') }}"  class="boton-header" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
-                        Logout
+                        Salir
                     </a>
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
@@ -36,18 +36,18 @@
 
     <div class="barra">
         <nav id="nav" class="navegacion-principal contenedor">
-            <a href="{{ url('/reports') }}">Reports</a>
-            <a href="{{ url('/statistics') }}">Statistics</a>
-            <a href="{{ url('/estimates') }}">Estimate</a>
-            <a href="{{ url('/analysis') }}">Analysis</a>
-            <a href="{{ url('/help') }}">Help</a>
+            <a href="{{ url('/reports') }}">Reportes</a>
+            <a href="{{ url('/statistics') }}">Estadisticas</a>
+            <a href="{{ url('/estimates') }}">Estimaciones</a>
+            <a href="{{ url('/analysis') }}">Analisis</a>
+            <a href="{{ url('/help') }}">Ayudas</a>
         </nav>
     </div>
 
     <div class="top-left">
         <div class="content">
             <div class="title m-b-md">
-                Help
+                Ayudas
             </div>
         </div>
     </div>

@@ -6,12 +6,13 @@
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/login.css" type="text/css">
+<link rel="stylesheet" href="css/base.css" type="text/css">
 
 
 <head>
     <div class="container"> 
          <h1>
-             Login
+             Ingreso
          </h1>
             
     </div> 
@@ -26,7 +27,7 @@
                              {{-- Contenedor para ingresar el email --}}
                              
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                                <label for="email" class="col-md-4 control-label">Correo electronico </label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
@@ -43,7 +44,7 @@
                             {{-- Contenedor para ingresar la contraseña  --}}
                             
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                <label for="password" class="col-md-4 control-label">Password</label>
+                                <label for="password" class="col-md-4 control-label">Contraseña</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password" class="form-control" name="password" required>
@@ -63,7 +64,7 @@
                                 <div class="col-md-6 col-md-offset-4">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : ''}}> Remember Me
+                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : ''}}> Recordarme
                                         </label>
                                     </div>
                                 </div>
@@ -75,11 +76,11 @@
                             <div class="form-group">
                                 <div class="col-md-8 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Login
+                                        Ingresar
                                     </button>
                                     <br>
                                     <a class="btn btn-link" href="{{ url('/password/reset') }}">
-                                        Forgot Your Password?
+                                        ¿No recuerda la contraseña?
                                     </a>
                                 </div>
                             </div>

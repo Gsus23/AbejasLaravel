@@ -9,8 +9,6 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/normalize.css" type="text/css">
         <link rel="stylesheet" href="css/base.css" type="text/css">
         <link rel="stylesheet" href="css/report.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
@@ -21,15 +19,15 @@
     <body>
         <header>
             <div class="izq">
-                <h3>Bee Lab - reports</h3>
+                <h3 class="titulo">Bee Lab - Reportes</h3>
             </div>
             <div class="der">
                 @if (Route::has('login'))
                 <div class="top-left links">
-                    <a href="{{ url('/home') }}" class="boton-header">Home</a>
+                    <a href="{{ url('/home') }}" class="boton-header">Inicio</a>
                     <a href="{{ url('/logout') }}" class="boton-header"  onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
-                        Logout
+                        Salir
                     </a>
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
@@ -42,18 +40,18 @@
 
     <div class="barra">
         <nav id="nav" class="navegacion-principal contenedor">
-            <a href="{{ url('/reports') }}">Reports</a>
-            <a href="{{ url('/statistics') }}">Statistics</a>
-            <a href="{{ url('/estimates') }}">Estimate</a>
-            <a href="{{ url('/analysis') }}">Analysis</a>
-            <a href="{{ url('/help') }}">Help</a>
+            <a href="{{ url('/reports') }}">Reportes</a>
+            <a href="{{ url('/statistics') }}">Estadisticas</a>
+            <a href="{{ url('/estimates') }}">Estimaciones</a>
+            <a href="{{ url('/analysis') }}">Analisis</a>
+            <a href="{{ url('/help') }}">Ayudas</a>
         </nav>
     </div>
 
     <div class="top-left">
         <div class="content">
             <div class="title m-b-md">
-                Reports
+                Reportes
             </div>
         </div>
     </div>
@@ -61,11 +59,11 @@
     <main> 
         <form action="{{url('/imprimir')}}">
             <div class="fecha-contenedor">
-                <label class="fecha" for="fecha">Date: </label>
+                <label class="fecha" for="fecha">Fecha: </label>
                 <input class="fecha" name="fecha_ingresada" id="fecha_ingresada" type="date">
                 <br>
 
-                <button type="submit"id="boton_general" class="boton">Export all</button>
+                <button type="submit"id="boton_general" class="boton-general">Exportar todo</button>
             </div>
         
 
@@ -73,29 +71,29 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Id</th><th>Schedule</th><th>Export to PDF</th>
+                        <th>Id</th><th>Horario</th><th>Exportar a PDF</th>
                     </tr>
                 </thead>
 
                 <tr>
                     <td>1</td>
                     <td>12am - 6am</td>
-                    <td><button id="boton_hora_1" type="submit" class="boton">Export</button></td>
+                    <td><button id="boton_hora_1" type="submit" class="boton-real">Exportar</button></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>6am - 12pm</td>
-                    <td><button id="boton_hora_2" type="submit" class="boton">Export</button></td></td>
+                    <td><button id="boton_hora_2" type="submit" class="boton-real">Exportar</button></td></td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>12pm - 6pm</td>
-                    <td><button id="boton_hora_3" type="submit" class="boton">Export</button></td></td>
+                    <td><button id="boton_hora_3" type="submit" class="boton-real">Exportar</button></td></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td>6pm - 12am</td>
-                    <td><button id="boton_hora_4" type="submit" class="boton">Export</button></td></td>
+                    <td><button id="boton_hora_4" type="submit" class="boton-real">Exportar</button></td></td>
                 </tr>
             </table>
             

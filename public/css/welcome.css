@@ -21,22 +21,7 @@
 .title {
     font-size: 84px;
 }
-.links a {
-    color: #000000;
-    padding: 0 25px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-} 
 
-.links a:hover{
-    background-color: rgb(218, 123, 68);
-    color:  rgb(255, 255, 255);
-    font-weight: bold;
-    transition: .4s;
-}
 .m-b-md {
     margin-bottom: 30px;
 }

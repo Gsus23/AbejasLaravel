@@ -31,7 +31,8 @@
             <form action="">
                 <fieldset class="apiario">
                     <legend>Datos apiario</legend>
-                    <h4>xxx</h4>
+                    <h4>Acontinuación se presentan los datos afines al apiario como por 
+                        ejemplo la ubicación del apiario, la temperatura, entre otros. </h4>
 
                     <fieldset class="apiario-basicos">
                     <legend>Datos basicos</legend>
@@ -53,7 +54,9 @@
 
                     <fieldset  class="apiario-ambiente">
                         <legend>Datos obtenidos</legend>
-                        <h4>xxx2</h4>
+                        <h4>En esta sección se presentan los datos recopilados mediante el uso de una estación 
+                            meterologica que proporciona dicha información.
+                        </h4>
                         <table class="tabla-amb">
                             <thead>
                                 <tr>
@@ -106,12 +109,6 @@
                         </table>
                     </fieldset>
                 </div>
-
-
-                <fieldset class="ambiente-apiario">
-                    <legend>Datos ambiente Vs Datos apiario</legend>
-                    <h2>Grafica</h2>
-                </fieldset>
             </form>
             
         </main>
