@@ -1,109 +1,20 @@
-html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
+
+main{
+    overflow: hidden; 
 }
 
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    height: 100vh;
-    margin: 0;
-}
-
-header{
-    background-color: rgb(177, 163, 37);
-    overflow: hidden;
-}
-
-
-.clearfix::after {
-    content:'';
-    clear: both;
-    display: block;
-}
-
-.content {
-    text-align: center;
-}
-
-
-/** Navegación Responsive **/
-.navegacion-principal {
-    transition: .5s;
-    max-height: unset;
-}
-
-/*Header*/
-.izq{
+.contenedor-datos{
     float: left;
-    width: 50%;
+    width: 30%;
+    padding: 10px 0; 
 }
 
-.der{
+.container{
+    text-align: right;
     float: right;
-    width: 50%;
-    text-align: right;
-}
-
-/** Navegacion **/
-.barra {
-    background-color: rgb(177, 163, 37);
-    text-align: left;
-}
-.navegacion-principal a {
-    color: #000000;
-    font-weight: bold;  
-    text-decoration: none;
-    font-size: 22px;
-    display: block;
-    text-align: right;
-    padding: 20px;
-}
-
-.navegacion-principal a{
-    display: inline-block;
-}
-
-.navegacion-principal a:hover {
-    background-color: rgb(255, 255, 255);
-    color:  rgb(177, 163, 37);
-    font-weight: bold;
-    transition: 0.4s;
-}
-
-.title {
-    font-size: 84px;
-    display: inline-block;
-}
-
-.links > a {
-    color: #000000;
-    padding: 0 25px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
+    width: 30%;
 }
 
 .m-b-md {
-    margin-bottom: 30px;
-}
-
-/**Textos**/
-
-h1{
-    text-align: center;
-    font-size: 84px;
-    display: inlane;
-}
-
-h3{
-    margin: 0;
-    display: inline;
-    color: #000000;
+    margin-bottom: 0px;
 }
