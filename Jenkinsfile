@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Prepare') {
       steps {
-        sh 'sh \'php --version\''
+        sh 'rm -rf build/api'
       }
     }
   }
