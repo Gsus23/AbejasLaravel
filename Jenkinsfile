@@ -3,8 +3,6 @@ pipeline {
   stages {
     stage('Prepare') {
       steps {
-        sh '''sh \'composer install\'
-                '''
         sh '''sh \'rm -rf build/api\'
                 '''
         sh '''sh \'rm -rf build/coverage\'
