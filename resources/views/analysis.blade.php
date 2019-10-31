@@ -11,7 +11,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/base.css" type="text/css">
-        <link rel="stylesheet" href="css/analysis.css" type="text/css">
+        <link rel="stylesheet" href="css/analisis.css" type="text/css">
          
         <script src="plugins/highcharts/code/highcharts.js"></script>
         <script src="plugins/highcharts/code/modules/series-label.js"></script>
@@ -63,23 +63,24 @@
     </div>
 
     <main>
-            <div class="contenedor-principal">
+        <div class="contenedor-principal">
+            <form action="">
 
-                <form action="">
+            <div class="contenedor-datos">
+                <fieldset >
+                    <legend class="ayuda-legend">Datos</legend>
+                    <div id="fechaContenedor" >
+                        <label class="fecha" for="fecha">Fecha:</label>
+                        <input class="fecha" name="fecha_ingresada" id="fecha_ingresada" type="date">
+                        <br><br>
 
-                    <fieldset class="contenedor-datos">
-                        <legend>Datos</legend>
-                        <div id="fechaContenedor" >
-                            <label class="fecha" for="fecha">Fecha:</label>
-                            <input class="fecha" name="fecha_ingresada" id="fecha_ingresada" type="date">
-                            <br>
-
-                            <button type="submit"id="boton_general" class="boton-general">Ver gráfica</button>
-                        </div>
-                    </fieldset>
+                        <button type="submit"id="boton_general" class="boton-general">Ver gráfica</button>
+                    </div>
+                </fieldset>    
+            </div>
            
-                    <div id="container" class="grafica">
-                        <script type="text/javascript">
+                <div id="container" class="grafica">
+                    <script type="text/javascript">
                             Highcharts.chart('container', {
                                 title: {
                                     text: 'Combination chart'
@@ -145,20 +146,23 @@
                                     }
                                 }]
                             });
-                        </script>
-                    </div>
-                </form>
-            </div>
+                    </script>            
+                </div>
+            </form>
+        </div>
 
-            <div>
-                <form>
-                    <label class="comentario" for="comentario">Comentarios</label>
-                    <br><br>
-                    <textarea rows="10" cols="50"></textarea>
-                    <br><br>
+        <div class="comentario">
+            <form>
+                <h2 class="text-com">Comentarios</h2>
+                <br><br>
+                <div class="com-izq">
+                    <textarea rows="10" cols="50"></textarea>                     
+                </div>          
+                <div class="com-der">
                     <button id="Agregar" type="submit" class="boton-real">Agregar comentario</button>
-                </form>
-            </div>
+                </div>
+            </form>
+        </div>
             
     </main>
    

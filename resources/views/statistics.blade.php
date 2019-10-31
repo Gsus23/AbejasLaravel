@@ -60,11 +60,13 @@
 
         <main>
             <div class="datos">
+
+                
                 
                 <fieldset class="datos-basicos" >
                     <legend>Datos basicos</legend>
                     
-                    <form id="formulario" method="POST" action="{{url('statistics')}}" >
+                    <form id="formulario" method="POST" action="{{url('statistics')}}" > 
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <label name="temperatura">Temperatura</label>
                         <br>    

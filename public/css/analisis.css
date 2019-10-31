@@ -1,0 +1,47 @@
+
+/*Peticion y muestra de datos*/
+
+
+.contenedor-principal{
+    overflow: hidden; 
+}
+
+.contenedor-datos{
+    float: left;
+    width: 30%;
+    padding: 0px 30px; 
+    padding-top: 10%;
+    text-align: center;
+}
+
+fieldset{
+    border-radius: 10%;
+}
+
+.grafica{
+    float: right;
+    width: 65%;
+}
+
+/*Texto principal*/
+
+.m-b-md {
+    margin-bottom: 0px;
+}
+
+.ayuda-legend{
+    font-weight: bold;
+    text-align: left;
+}
+
+/*Comentarios*/
+.text-com{
+    margin: 20px 0px 0px 0px !important;
+    
+}
+
+.comentario{
+    text-align: center;
+    overflow: hidden; 
+}
+

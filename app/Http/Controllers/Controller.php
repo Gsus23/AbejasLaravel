@@ -31,7 +31,10 @@ class Controller extends BaseController
        
         $temperatura = $request->input("temperatura");
 
-        $actividades = DB::table('actividad')->join('clima_ambiente','actividad.apiario_id','=','clima_ambiente.apiario_id')->where('clima_ambiente.temperatura',$temperatura)->get();
+        $actividades = DB::table('actividad')
+                        ->join('clima_ambiente','actividad.apiario_id','=','clima_ambiente.apiario_id')
+                        ->where('clima_ambiente.temperatura',$temperatura)
+                        ->get();
 
          return view('statistics',compact('actividades'));
     }

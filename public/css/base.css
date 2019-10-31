@@ -1,3 +1,11 @@
+/*Fuente*/
+@font-face{ 
+	font-family: 'Raleway';
+	src: url('fonts/Raleway-Thin.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
 /*Paneles principales*/
 
 .clearfix::after {

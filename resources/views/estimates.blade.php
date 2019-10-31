@@ -8,6 +8,7 @@
         <title>Estimaciones</title>
 
         <!-- Fonts -->
+        
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/estimates.css" type="text/css">
         <link rel="stylesheet" href="css/base.css" type="text/css">
@@ -54,7 +55,27 @@
     </div>
 
     <main>
-    </main>
+            <div class="datos">
+            <p class="ayuda">Ingrese los datos del clima sobre el cual desea conocer la actividad de las abejas</p>
+                <fieldset class="datos-basicos" >
+                    <legend class="titulo-legend">Datos basicos</legend>
+                    
+                    <form id="formulario" method="POST" action="{{url('statistics')}}" > 
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <label name="temperatura">Temperatura</label>
+                        <br>    
+                        <input type="text" name="temperatura" id="temperatura" placeholder="Ejemplo: 30" required="required">
+                        <br> <br>
+                        <label name="humedad">Humedad</label>
+                        <br>    
+                        <input type="text" name="humedad" id="humedad" placeholder="Ejemplo: 30" required="required">
+                        <br> <br>
+                        <button type="submit" name="submit" class="boton-consulta">Ver</button>
+                        <br><br>
+                    </form>
+                </fieldset>
+            </div>
+        </main>
         
     </body>
 </html>
