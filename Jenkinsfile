@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Prepare') {
       steps {
-        echo 'xD'
+        sh ' sh \'rm -rf build/api\''
       }
     }
   }
