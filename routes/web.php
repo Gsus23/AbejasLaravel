@@ -32,6 +32,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::post('/statistics', 'StatisticsController@store');
+Route::post('/Analysis', 'AnalysisController@store');
 
 
 

@@ -32,4 +32,18 @@ class AnalysisController extends Controller
         
         return view('analysis');
     }
+
+    public function store(){
+
+        $variable = $_POST['fecha_ingresada'];    
+
+        $con = \DB::table('clima_ambiente')
+                ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
+                ->select('actividad.fecha')
+                ->where('clima_ambiente.fecha','=',$variable)
+                ->max('actividad.entrada');
+
+                
+        return view('analysis2',compact('con'));  
+    }
 }
