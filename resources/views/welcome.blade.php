@@ -22,7 +22,7 @@
                         <a href="{{ url('/home') }}" class="boton-w">Home</a>
                         
                     @else
-                        <a href="{{ url('/login') }}" class="boton-w">Ingresa</a>
+                        <a href="{{ url('/login') }}" class="boton-w">Ingresar</a>
                         <a href="{{ url('/register') }}" class="boton-w">Registrar</a>     
                     @endif
                 </div>
