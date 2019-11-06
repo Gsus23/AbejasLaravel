@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+
 
 class TablaUbicacionSeeder extends Seeder
 {
@@ -12,7 +14,7 @@ class TablaUbicacionSeeder extends Seeder
      */
     public function run()
     {
-      
+
        $url = [
        		'https://www.google.com/maps/place/Apiarios+Castañeda/@4.7966955,-75.7492364,17z/data=!3m1!4b1!4m5!3m4!1s0x8e387d04ea8e3c4b:0x99c7376f76714feb!8m2!3d4.7966955!4d-75.7470477',
        		'https://www.google.com/maps/place/Apiario+Tiagori/@4.5618553,-75.6476467,17z/data=!3m1!4b1!4m5!3m4!1s0x8e38f50eb97375eb:0xea0520df85267044!8m2!3d4.5618553!4d-75.645458',

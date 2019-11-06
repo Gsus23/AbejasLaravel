@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Clima_Ambiente;
+use Illuminate\Support\Facades\DB;
+
 
 class TablaClima_AmbienteSeeder extends Seeder
 {

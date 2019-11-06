@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Clima_Apiario;
+use Illuminate\Support\Facades\DB;
+
 
 class TablaClima_ApiarioSeeder extends Seeder
 {
