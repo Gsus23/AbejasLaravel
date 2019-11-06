@@ -15,7 +15,7 @@ class TablaActividadSeeder extends Seeder
      */
     public function run()
     {
-    	DB::statement('TRUNCATE TABLE {$actividad} RESTART IDENTITY CASCADE');
+    	DB::statement('TRUNCATE TABLE {actividad} RESTART IDENTITY CASCADE');
         factory(Actividad::class,50)->create();
 
     }
