@@ -14,7 +14,7 @@ class TablaApiarioSeeder extends Seeder
      */
     public function run()
     {
-      DB::statement('TRUNCATE TABLE {apiario} RESTART IDENTITY CASCADE');
+      //DB::statement('TRUNCATE TABLE {apiario} RESTART IDENTITY CASCADE');
         $nombre = [
        		'Apiario Castañeda',
        		'Apiario Tiagori',
