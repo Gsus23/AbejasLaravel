@@ -14,7 +14,7 @@ class TablaClima_AmbienteSeeder extends Seeder
      */
     public function run()
     {
-    	DB::statement('SET FOREIGN_KEY_CHECKS = 0;');
+    	//DB::statement('SET FOREIGN_KEY_CHECKS = 0;');
         factory(Clima_Ambiente::class,50)->create();
     }
 }
