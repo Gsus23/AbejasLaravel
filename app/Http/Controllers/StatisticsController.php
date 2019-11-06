@@ -38,7 +38,7 @@ class StatisticsController extends Controller
 
         
 
-        $conexion = mysqli_connect('localhost','BeeLab','abejas12345','beelab');
+        $conexion = mysqli_connect('ec2-174-129-226-234.compute-1.amazonaws.com','gpyccnctwooafc','0e95e9275e84d6e924e6f0f2b9c31c928b8c6a4fa5928cfbaa2a99844fd10b85','ddf14bvpv247b');
         $variable=$_POST['temperatura'];
         $variable1=$_POST['humedad'];
         $variable2=$_POST['temperatura_apiario'];
