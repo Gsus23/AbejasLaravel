@@ -14,7 +14,7 @@ class TablaClima_AmbienteSeeder extends Seeder
      */
     public function run()
     {
-    	DB::statement('TRUNCATE TABLE {$table} RESTART IDENTITY CASCADE');
+    	DB::statement('TRUNCATE TABLE {$clima_ambiente} RESTART IDENTITY CASCADE');
         factory(Clima_Ambiente::class,50)->create();
     }
 }
