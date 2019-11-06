@@ -14,7 +14,7 @@ class TablaClima_ApiarioSeeder extends Seeder
      */
     public function run()
     {
-    	DB::statement('SET FOREING_KEY_CHECKS = 0;');
+    	DB::statement('SET FOREIGN_KEY_CHECKS = 0;');
         factory(Clima_Apiario::class,50)->create();
     }
 }
