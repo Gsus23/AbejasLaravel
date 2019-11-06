@@ -25,7 +25,7 @@
     <body>
         <header>
             <div class="izq">
-                <h3>Bee Lab - Analisis</h3>
+                <h3>Bee Lab - Análisis</h3>
             </div>
             <div class="der">
                 @if (Route::has('login'))
