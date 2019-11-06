@@ -44,7 +44,7 @@
     <body>
         <header>
             <div class="izq">
-                <h3>Bee Lab - Analisis</h3>
+                <h3>Bee Lab - Análisis</h3>
             </div>
             <div class="der">
                 @if (Route::has('login'))
@@ -68,7 +68,7 @@
             <a href="{{ url('/reports') }}">Reportes</a>
             <a href="{{ url('/statistics') }}">Estadisticas</a>
             <a href="{{ url('/estimates') }}">Estimaciones</a>
-            <a href="{{ url('/analysis') }}">Analisis</a>
+            <a href="{{ url('/analysis') }}">Análisis</a>
             <a href="{{ url('/help') }}">Ayudas</a>
         </nav>
     </div>
