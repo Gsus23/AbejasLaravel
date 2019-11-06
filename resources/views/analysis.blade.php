@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+<?php
+    $con;
+    if (empty($con)) {
+        $con="0";s
+    }
+    $con1;
+    if (empty($con1)) {
+        $con1="0";s
+    }
+    $con2;
+    if (empty($con2)) {
+        $con2="0";s
+    }
+    $con3;
+    if (empty($con3)) {
+        $con3="0";s
+    }
+
+?>
 <html lang="en">
 
     <head>
@@ -101,7 +120,71 @@
            
                 <div id="container" class="grafica">
                     <script type="text/javascript">
-
+                            Highcharts.chart('container', {
+                                    title: {
+                                        text: 'Análisis estadístico de actividad'
+                                    },
+                                    xAxis: {
+                                        categories: ['12 am - 6 am', '6 am - 12 pm', '12 pm - 6 pm', '6 pm - 12 am']
+                                    },
+                                    labels: {
+                                        items: [{
+                                            html: 'Total actividad',
+                                            style: {
+                                                left: '70px',
+                                                top: '0px',
+                                                color: ( // theme
+                                                    Highcharts.defaultOptions.title.style &&
+                                                    Highcharts.defaultOptions.title.style.color
+                                                ) || 'black'
+                                            }
+                                        }]
+                                    },
+                                    series: [{
+                                        type: 'column',
+                                        name: 'Temperatura ambiente',
+                                        data: [$con, 2, 2, 3]
+                                    }, {
+                                        type: 'column',
+                                        name: 'Humedad',
+                                        data: [$con1, 3, 5, 7]
+                                    }, {
+                                        type: 'column',
+                                        name: 'Temperatura colmena',
+                                        data: [$con2, 3, 3, 9]
+                                    }, {
+                                        type: 'spline',
+                                        name: 'Promedio',
+                                        data: [$con3, 2.67, 3, 6.33],
+                                        marker: {
+                                            lineWidth: 2,
+                                            lineColor: Highcharts.getOptions().colors[3],
+                                            fillColor: 'white'
+                                        }
+                                    }, {
+                                        type: 'pie',
+                                        name: 'Total',
+                                        data: [{
+                                            name: 'Temperatura ambiente',
+                                            y: 13,
+                                            color: Highcharts.getOptions().colors[0] // Jane's color
+                                        }, {
+                                            name: 'Humedad',
+                                            y: 23,
+                                            color: Highcharts.getOptions().colors[1] // John's color
+                                        }, {
+                                            name: 'Temperatura colmena',
+                                            y: 19,
+                                            color: Highcharts.getOptions().colors[2] // Joe's color
+                                        }],
+                                        center: [100, 50],
+                                        size: 100,
+                                        showInLegend: false,
+                                        dataLabels: {
+                                            enabled: false
+                                        }
+                                    }]
+                                });
                                                  
 
                               
