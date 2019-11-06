@@ -40,25 +40,25 @@ class AnalysisController extends Controller
         $con = \DB::table('clima_ambiente')
                 ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
                 ->select('actividad.fecha')
-                ->where('clima_ambiente.fecha','=',$variable,'&&','actividad.entrada','Between ','00','And','6')
+                ->where('clima_ambiente.fecha','=',$variable)
                 ->max('actividad.entrada');
 
         $con1 = \DB::table('clima_ambiente')
                 ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
                 ->select('actividad.fecha')
-                ->where('clima_ambiente.fecha','=',$variable,'&&','actividad.entrada','Between ','6','And','12')
+                ->where('clima_ambiente.fecha','=',$variable)
                 ->max('actividad.entrada');
 
         $con2 = \DB::table('clima_ambiente')
                 ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
                 ->select('actividad.fecha')
-                ->where('clima_ambiente.fecha','=',$variable,'&&','actividad.entrada','Between ','12','And','18')
+                ->where('clima_ambiente.fecha','=',$variable)
                 ->max('actividad.entrada');
 
         $con3 = \DB::table('clima_ambiente')
                 ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
                 ->select('actividad.fecha')
-                ->where('clima_ambiente.fecha','=',$variable,'&&','actividad.entrada','Between ','18','And','00')
+                ->where('clima_ambiente.fecha','=',$variable)
                 ->max('actividad.entrada');
 
 
