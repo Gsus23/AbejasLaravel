@@ -18,6 +18,7 @@ class CrearTablaApiario extends Migration
             $table->string('nombre',25);
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('ubicacion_id');
+            $table->foreign('ubicacion_id')->references('id')->on('ubicacion');
             $table->timestamps();
         });
     }

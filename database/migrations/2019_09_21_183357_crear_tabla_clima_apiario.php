@@ -19,6 +19,7 @@ class CrearTablaClimaApiario extends Migration
             $table->date('fecha');
             $table->string('hora');
             $table->unsignedInteger('apiario_id');
+            $table->foreign('apiario_id')->references('id')->on('apiario');
             $table->timestamps();
         });
     }
