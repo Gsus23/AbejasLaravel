@@ -40,10 +40,31 @@ class AnalysisController extends Controller
         $con = \DB::table('clima_ambiente')
                 ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
                 ->select('actividad.fecha')
-                ->where('clima_ambiente.fecha','=',$variable)
+                ->where('clima_ambiente.fecha','=',$variable,'&&','actividad.entrada','Between ','00','And','6')
                 ->max('actividad.entrada');
 
+        $con1 = \DB::table('clima_ambiente')
+                ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
+                ->select('actividad.fecha')
+                ->where('clima_ambiente.fecha','=',$variable,'&&','actividad.entrada','Between ','6','And','12')
+                ->max('actividad.entrada');
+
+        $con2 = \DB::table('clima_ambiente')
+                ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
+                ->select('actividad.fecha')
+                ->where('clima_ambiente.fecha','=',$variable,'&&','actividad.entrada','Between ','12','And','18')
+                ->max('actividad.entrada');
+
+        $con3 = \DB::table('clima_ambiente')
+                ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
+                ->select('actividad.fecha')
+                ->where('clima_ambiente.fecha','=',$variable,'&&','actividad.entrada','Between ','18','And','00')
+                ->max('actividad.entrada');
+
+
+
+
                 
-        return view('analysis2',compact('con'));  
+        return view('analysis2',compact('con','con1','con2','con3'));  
     }
 }

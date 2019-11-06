@@ -131,15 +131,15 @@
                                     }, {
                                         type: 'column',
                                         name: 'Humedad',
-                                        data: [2, 3, 5, 7]
+                                        data: [<?php echo $con1 ?>, 3, 5, 7]
                                     }, {
                                         type: 'column',
                                         name: 'Temperatura colmena',
-                                        data: [4, 3, 3, 9]
+                                        data: [<?php echo $con2 ?>, 3, 3, 9]
                                     }, {
                                         type: 'spline',
                                         name: 'Promedio',
-                                        data: [3, 2.67, 3, 6.33],
+                                        data: [<?php echo $con3 ?>, 2.67, 3, 6.33],
                                         marker: {
                                             lineWidth: 2,
                                             lineColor: Highcharts.getOptions().colors[3],
