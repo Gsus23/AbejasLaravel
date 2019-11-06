@@ -14,13 +14,13 @@ class DatabaseSeeder extends Seeder
     {
      
 
-        $this->truncateTables([
+       /* $this->truncateTables([
         	'ubicacion',
         	'apiario',
         	'clima_apiario',
         	'clima_ambiente',
         	'actividad'
-        ]);
+        ]);*/
         $this->call(TablaUbicacionSeeder::class);
         $this->call(TablaApiarioSeeder::class);
         $this->call(TablaClima_ApiarioSeeder::class);
