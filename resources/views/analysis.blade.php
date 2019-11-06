@@ -49,7 +49,7 @@
             <a href="{{ url('/reports') }}">Reportes</a>
             <a href="{{ url('/statistics') }}">Estadisticas</a>
             <a href="{{ url('/estimates') }}">Estimaciones</a>
-            <a href="{{ url('/analysis') }}">Analisis</a>
+            <a href="{{ url('/analysis') }}">Análisis</a>
             <a href="{{ url('/help') }}">Ayudas</a>
         </nav>
     </div>
