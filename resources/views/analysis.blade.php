@@ -119,8 +119,9 @@
                 
         </div>   
             </div>
-           
-                <div id="container" class="grafica">
+            <div class="grafica">
+                .
+                <div id="container" >
                     <script type="text/javascript">
                             Highcharts.chart('container', {
                                     title: {
@@ -151,6 +152,25 @@
                                         name: 'Humedad',
                                         data: [2, 3, 5, 7]
                                     }, {
+<<<<<<< HEAD
+                                        name: 'Joe',
+                                        y: 19,
+                                        color: Highcharts.getOptions().colors[2] // Joe's color
+                                    }],
+                                    center: [100, 80],
+                                    size: 100,
+                                    showInLegend: false,
+                                    dataLabels: {
+                                        enabled: false
+                                    }
+                                }]
+                            });
+                    </script>            
+                </div>
+            </div>
+            </form>
+        </div>
+=======
                                         type: 'column',
                                         name: 'Temperatura colmena',
                                         data: [2, 3, 3, 9]
@@ -188,6 +208,7 @@
                                     }]
                                 });
                                                  
+>>>>>>> bbcb9621835bf0366a774be6a31969f11761b164
 
                               
                     </script>            

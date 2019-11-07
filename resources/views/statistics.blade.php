@@ -60,9 +60,6 @@
 
         <main>
             <div class="datos">
-
-                
-                
                 <fieldset class="datos-basicos" >
                     <legend>Datos basicos</legend>
                     
