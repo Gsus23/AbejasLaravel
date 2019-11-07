@@ -49,7 +49,7 @@ class StatisticsController extends Controller
         $consulta1=\DB::table('clima_ambiente')
                 ->join('actividad','actividad.apiario_id','=','clima_ambiente.apiario_id')
                 ->select('actividad.entrada')
-                ->where('clima_ambiente.Porcentaje_humedad','=',$variable1)
+                ->where('clima_ambiente."Porcentaje_Humedad"','=',$variable1)
                 ->get();
 
         $consulta2=\DB::table('clima_apiario')
