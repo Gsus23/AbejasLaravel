@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Actividad;
+use Illuminate\Support\Facades\DB;
+
+
 
 class TablaActividadSeeder extends Seeder
 {
@@ -12,6 +15,8 @@ class TablaActividadSeeder extends Seeder
      */
     public function run()
     {
+    	//DB::statement('TRUNCATE TABLE {actividad} RESTART IDENTITY CASCADE');
         factory(Actividad::class,50)->create();
+
     }
 }

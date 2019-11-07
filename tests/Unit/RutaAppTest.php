@@ -1,0 +1,20 @@
+<?php
+namespace Tests\Unit;
+
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
+
+class RutaAppTest extends TestCase
+{
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testRuta()
+    {
+    	$response = $this->call('GET','miAPP');
+    	$this->assertResponseOk();
+        $this->assertEquals('Esta es mi APP', $response->getContent());
+    }
+}

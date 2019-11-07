@@ -32,4 +32,45 @@ class AnalysisController extends Controller
         
         return view('analysis');
     }
+
+    public function store(){
+
+        $variable = $_POST['fecha_ingresada'];    
+
+        $con = \DB::table('clima_ambiente')
+                ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
+                ->select('actividad.fecha')
+                ->where('clima_ambiente.fecha','=',$variable,'and','actividad.hora','between','00:00:00',
+                'and','06:00:00')
+                ->max('actividad.entrada');
+
+        $con1 = \DB::table('clima_ambiente')
+                ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
+                ->select('actividad.fecha')
+                ->where('clima_ambiente.fecha','=',$variable,'and','actividad.hora','between','06:00:00',
+                'and','12:00:00')
+                ->max('actividad.entrada');
+
+        $con2 = \DB::table('clima_ambiente')
+                ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
+                ->select('actividad.fecha')
+                ->where('clima_ambiente.fecha','=',$variable,'and','actividad.hora','between','12:00:00',
+                'and','18:00:00')
+                ->max('actividad.entrada');
+
+        $con3 = \DB::table('clima_ambiente')
+                ->join('actividad','clima_ambiente.fecha','=','actividad.fecha')
+                ->select('actividad.fecha')
+                ->where('clima_ambiente.fecha','=',$variable,'and','actividad.hora','between','18:00:00',
+                'and','00:00:00')
+                ->max('actividad.entrada');
+
+        
+
+
+
+
+        //return view('analysis',compact('c1'));
+        return view('analysis',compact('con','con1','con2','con3'));  
+    }
 }

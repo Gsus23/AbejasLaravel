@@ -15,7 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::get('/apiario','ApiarioController@index');
+=======
+Route::get('miAPP', function () {
+
+    return 'Esta es mi APP';
+});
+Route::name('imprimir')->get('/imprimir-pdf', 'Controller@imprimir');
+>>>>>>> bbcb9621835bf0366a774be6a31969f11761b164
 Route::get('/reports', 'ReportsController@index');
 Route::get('/statistics', 'StatisticsController@index');
 Route::get('/estimates', 'EstimateController@index');
@@ -34,8 +42,13 @@ Route::name('imprimir')->get('/imprimir', 'Controller@imprimir');
 Auth::routes();
 
 
+<<<<<<< HEAD
 
 
+=======
+Route::post('/statistics', 'StatisticsController@store');
+Route::post('/Analysis', 'AnalysisController@store');
+>>>>>>> bbcb9621835bf0366a774be6a31969f11761b164
 
 
 

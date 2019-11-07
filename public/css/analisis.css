@@ -10,7 +10,7 @@
     float: left;
     width: 30%;
     padding: 0px 30px; 
-    padding-top: 10%;
+    padding-top: 0%;
     text-align: center;
 }
 
@@ -19,10 +19,15 @@ fieldset{
 }
 
 .grafica{
+    padding-right: 10%;
     float: right;
+<<<<<<< HEAD
     width: 65%;
     padding-right: 20px;
     margin-right: 20px;
+=======
+    width: 60%;
+>>>>>>> bbcb9621835bf0366a774be6a31969f11761b164
 }
 
 /*Texto principal*/
@@ -43,6 +48,7 @@ fieldset{
 }
 
 .comentario{
+
     text-align: center;
     overflow: hidden; 
 }

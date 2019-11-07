@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\Clima_Apiario;
+use Illuminate\Support\Facades\DB;
+
 
 class TablaClima_ApiarioSeeder extends Seeder
 {
@@ -12,6 +14,7 @@ class TablaClima_ApiarioSeeder extends Seeder
      */
     public function run()
     {
+    	//DB::statement('TRUNCATE TABLE {clima_apiario} RESTART IDENTITY CASCADE');
         factory(Clima_Apiario::class,50)->create();
     }
 }

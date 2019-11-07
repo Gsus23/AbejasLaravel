@@ -36,56 +36,30 @@ class StatisticsController extends Controller
 
     public function store(){
 
-        
-
-        $conexion = mysqli_connect('localhost','BeeLab','abejas12345','beelab');
         $variable=$_POST['temperatura'];
         $variable1=$_POST['humedad'];
         $variable2=$_POST['temperatura_apiario'];
-             
-        $sql="SELECT c.id,c.temperatura,a.id,a.entrada,c.apiario_id,a.apiario_id
-            FROM clima_ambiente c 
-            JOIN actividad a ON a.apiario_id=c.apiario_id
-            WHERE c.temperatura=$variable";
 
-        $sql1="SELECT c.id,c.temperatura,a.id,a.entrada,c.apiario_id,a.apiario_id
-            FROM clima_ambiente c 
-            JOIN actividad a ON a.apiario_id=c.apiario_id
-            WHERE c.Porcentaje_humedad=$variable1";
+        $consulta=\DB::table('clima_ambiente')
+                ->join('actividad','actividad.apiario_id','=','clima_ambiente.apiario_id')
+                ->select('actividad.entrada')
+                ->where('clima_ambiente.temperatura','=',$variable)
+                ->get();
 
-        $sql2="SELECT c.id,c.temperatura,a.id,a.entrada,c.apiario_id,a.apiario_id
-            FROM clima_apiario c 
-            JOIN actividad a ON a.apiario_id=c.apiario_id
-            WHERE c.temperatura=$variable2";    
+        $consulta1=\DB::table('clima_ambiente')
+                ->join('actividad','actividad.apiario_id','=','clima_ambiente.apiario_id')
+                ->select('actividad.entrada')
+                ->where('clima_ambiente.Porcentaje_humedad','=',$variable1)
+                ->get();
 
-        $result=mysqli_query($conexion,$sql);
-        $result1=mysqli_query($conexion,$sql1);
-        $result2=mysqli_query($conexion,$sql2);
-
-        $consulta=[];
-        $i=0;
-            while($c=mysqli_fetch_array($result)){
-
-                $consulta[$i]=$c['entrada'];
-                $i++;
-             }
-        $consulta1=[];
-        $i1=0;
-             while($c2=mysqli_fetch_array($result1)){
-
-                $consulta1[$i1]=$c2['entrada'];
-                $i1++;
-             }
-        $consulta2=[];
-        $i2=0;
-             while($c3=mysqli_fetch_array($result2)){
-
-                $consulta2[$i2]=$c3['entrada'];
-                $i2++;
-             }
+        $consulta2=\DB::table('clima_apiario')
+                ->join('actividad','actividad.apiario_id','=','clima_apiario.apiario_id')
+                ->select('actividad.entrada')
+                ->where('clima_apiario.temperatura','=',$variable2)
+                ->get();   
                 
 
-    return view('statistics2',compact('consulta1','consulta','consulta2'));
+    return view('statistics2',compact('consulta','consulta1','consulta2'));
                 
     }
 }
