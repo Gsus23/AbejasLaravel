@@ -21,6 +21,8 @@ fieldset{
 .grafica{
     float: right;
     width: 65%;
+    padding-right: 20px;
+    margin-right: 20px;
 }
 
 /*Texto principal*/

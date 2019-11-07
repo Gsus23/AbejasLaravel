@@ -7,7 +7,7 @@
 
         <title>Reports</title>
 
-        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/base.css" type="text/css">
         <link rel="stylesheet" href="css/report.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.12.0/d3.min.js"></script>
@@ -58,13 +58,17 @@
     <main> 
         <form action="{{url('/imprimir')}}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <div class="fecha-contenedor"> 
-                <label class="fecha" for="fecha">Fecha: </label>
-                <input class="fecha" name="fecha_ingresada" id="fecha_ingresada" type="date" required>
-                <br>
-
-                <button type="submit"id="boton_general" class="boton-general">Exportar todo</button>
-            </div>
+        <div class="fecha-contenedor"> 
+            <section>
+                <fieldset class="fieldset"> 
+                    <legend class="leyenda">Fecha del apiario</legend>
+                    <label class="fecha" for="fecha">Fecha: </label>
+                    <input class="fecha" name="fecha_ingresada" id="fecha_ingresada" type="date" required>
+                    <br><br>
+                    <button type="submit"id="boton_general" class="boton-general">Exportar todo</button>
+                </fieldset> 
+            </section> 
+         </div>
         
 
             <div class="reporte">

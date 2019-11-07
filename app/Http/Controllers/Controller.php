@@ -27,8 +27,6 @@ class Controller extends BaseController
     }
 
     function consultar(Request $request){
-
-       
         $temperatura = $request->input("temperatura");
 
         $actividades = DB::table('actividad')
@@ -37,6 +35,29 @@ class Controller extends BaseController
                         ->get();
 
          return view('statistics',compact('actividades'));
+    }
+
+    function estimar(Request $request)
+    {
+        $temperatura = $request->input("temperatura");
+        $humedad = $request->input("humedad");
+        $actividadTotal = "0";
+
+        $estimacion = \DB::table('apiario')
+                        ->select('actividad.entrada','actividad.salida','apiario.id')
+                        ->join('clima_ambiente','clima_ambiente.apiario_id','=','apiario.id')
+                        ->join('actividad','actividad.apiario_id','=','apiario.id')
+                        ->where('clima_ambiente.temperatura','=',$temperatura, 
+                            'or', 'clima_ambiente.porcentaje_humedad','=',$humedad)
+                        ->get();
+
+        foreach ($estimacion as $datos) {
+            $actividadParcial = (($datos->entrada) + ($datos->salida));
+            $actividadTotal = $actividadTotal + $actividadParcial;
+        }   
+        $actividadTotal = $actividadTotal/count($estimacion);
+        
+        return view('estimates',compact('actividadTotal'));
     }
      
 }

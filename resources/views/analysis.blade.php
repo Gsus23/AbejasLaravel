@@ -78,8 +78,9 @@
                     </div>
                 </fieldset>    
             </div>
-           
-                <div id="container" class="grafica">
+            <div class="grafica">
+                .
+                <div id="container" >
                     <script type="text/javascript">
                             Highcharts.chart('container', {
                                 title: {
@@ -148,6 +149,7 @@
                             });
                     </script>            
                 </div>
+            </div>
             </form>
         </div>
 

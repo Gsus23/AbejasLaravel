@@ -15,23 +15,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::name('imprimir')->get('/imprimir-pdf', 'Controller@imprimir');
+Route::get('/apiario','ApiarioController@index');
 Route::get('/reports', 'ReportsController@index');
 Route::get('/statistics', 'StatisticsController@index');
 Route::get('/estimates', 'EstimateController@index');
 Route::get('/analysis', 'AnalysisController@index');
 Route::get('/help', 'HelpController@index');
-Route::get('/imprimir', 'Controller@imprimir');
+Route::get('/home', 'HomeController@index');
+
+Route::resource('controler', 'Controller');
+
+Route::post('/statistics', 'StatisticsController@store');
+
 Route::name('consultar')->get('/consultar','Controller@consultar');
-
-
-Route::get('/apiario','ApiarioController@index');
+Route::name('estimar')->get('/estimar','Controller@estimar');
+Route::name('imprimir')->get('/imprimir', 'Controller@imprimir');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
-Route::post('/statistics', 'StatisticsController@store');
+
+
 
 
 
