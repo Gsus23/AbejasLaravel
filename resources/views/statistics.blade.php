@@ -1,5 +1,18 @@
 <!DOCTYPE html>
-
+<?php
+    $consulta;
+    if (empty($consulta)) {
+        $consulta="0";
+    }
+    $consulta1;
+    if (empty($consulta1)) {
+        $consulta1="0";
+    }
+    $consulta2;
+    if (empty($consulta2)) {
+        $consulta2="0";
+    }
+?>
 <html lang="en">
 
 
@@ -60,9 +73,6 @@
 
         <main>
             <div class="datos">
-
-                
-                
                 <fieldset class="datos-basicos" >
                     <legend>Datos basicos</legend>
                     
@@ -84,6 +94,74 @@
                         <br><br>
                     </form>
                 </fieldset>
+            </div>
+            <div id="container" ><div>
+                    
+            <div class="grafica">
+                <script type="text/javascript">
+                Highcharts.chart('container', {
+                                title: {
+                                    text: 'Temperatura'
+                                },
+                    
+                                yAxis: {
+                                    text: 'Actividad'
+                                },
+                                legend: {
+                                    layout: 'vertical',
+                                    align: 'right',
+                                    verticalAlign: 'middle'
+                                },
+                                plotOptions: {
+                                    series: {
+                                        label: {
+                                            connectorAllowed: false
+                                        },
+                                        pointStart: 0
+                                    }
+                                },
+                                series: [{
+                                    name: 'Temperatura',
+                                    data: [
+                                        
+                                        <?php foreach ($consulta as $con): ?>
+                                        [<?php echo $con ?>],
+                                        <?php endforeach ?>
+                                        
+                                    ]
+                                },{
+                                    name: 'Humedad',
+                                    data: [
+                                        
+                                        <?php foreach ($consulta1 as $con1): ?>
+                                        [<?php echo $con1 ?>],
+                                        <?php endforeach ?>
+                                        
+                                    ]
+                                },{
+                                    name: 'Temperatura apiario',
+                                    data: [
+                                        
+                                        <?php foreach ($consulta2 as $con2): ?>
+                                        [<?php echo $con2 ?>],
+                                        <?php endforeach ?>
+                                        
+                                    ]
+                                }],
+                                responsive: {
+                                    rules: [{
+                                        condition: {
+                                            maxWidth: 500
+                                        },
+                                        chartOptions: {
+                                            legend: {
+                                                enabled: false
+                                            }
+                                        }
+                                    }]
+                                }
+                            }); 
+                </script>
             </div>
         </main>
     </body>
