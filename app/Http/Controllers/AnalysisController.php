@@ -61,10 +61,15 @@ class AnalysisController extends Controller
                 ->where('clima_ambiente.fecha','=',$variable)
                 ->max('actividad.entrada');
 
+        $c=1;
+        $c1=1;
+        $c2=1;
+        $c31;
+
 
 
 
                 
-        return view('analysis',compact('con','con1','con2','con3'));  
+        return view('analysis',compact('c','c1','c2','c3'));  
     }
 }

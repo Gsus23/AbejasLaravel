@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <?php
-    $con;
-    if (empty($con)) {
-        $con="0";
+    $c;
+    if (empty($c)) {
+        $c="0";
     }
-    $con1;
-    if (empty($con1)) {
-        $con1="0";
+    $c1;
+    if (empty($c1)) {
+        $c1="0";
     }
-    $con2;
-    if (empty($con2)) {
-        $con2="0";
+    $c2;
+    if (empty($c2)) {
+        $c2="0";
     }
-    $con3;
-    if (empty($con3)) {
-        $con3="0";
+    $c3;
+    if (empty($c3)) {
+        $c3="0";
     }
 
 ?>
