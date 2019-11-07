@@ -93,7 +93,7 @@
                         <label class="fecha" for="fecha">Fecha:</label>
                         <input class="fecha" name="fecha_ingresada" id="fecha_ingresada" type="date">
                         <br><br>
-                        <h2>{{c1}}</h2>
+                        <h2>{{$c1}}</h2>
                         <button type="submit" id="boton_general" class="boton-general">Ver gráfica</button>
                         <br>
                     </div>
