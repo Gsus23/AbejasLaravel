@@ -19,6 +19,13 @@ Route::get('miAPP', function () {
     return 'Esta es mi APP';
 });
 
+
+Route::get('MiApp', function () {
+
+    return 'Esta es mi aplicación';
+});
+
+
 Route::get('/apiario','ApiarioController@index');
 Route::get('/reports', 'ReportsController@index');
 Route::get('/statistics', 'StatisticsController@index');
@@ -38,6 +45,10 @@ Route::name('consultar')->get('/consultar','Controller@consultar');
 Route::name('estimar')->get('/estimar','Controller@estimar');
 Route::name('imprimir')->get('/imprimir', 'Controller@imprimir');
 
+
+Route::post('/statistics', 'StatisticsController@store');
+Route::post('/Analysis', 'AnalysisController@store');
+
 Auth::routes();
 
 
@@ -45,4 +56,6 @@ Auth::routes();
 
 
 
+>>>>>>> 193f0f8334b0aa94501f10fe7c7eb1ac923aa3c1
 
+Auth::routes();
