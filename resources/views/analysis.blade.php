@@ -1,21 +1,10 @@
 <!DOCTYPE html>
 <?php
-    $c;
-    if (empty($c)) {
-        $c="0";
-    }
     $c1;
     if (empty($c1)) {
         $c1="0";
     }
-    $c2;
-    if (empty($c2)) {
-        $c2="0";
-    }
-    $c3;
-    if (empty($c3)) {
-        $c3="0";
-    }
+   
 
 ?>
 <html lang="en">
@@ -93,7 +82,7 @@
                         <label class="fecha" for="fecha">Fecha:</label>
                         <input class="fecha" name="fecha_ingresada" id="fecha_ingresada" type="date">
                         <br><br>
-                        <h2>{{$c1}}</h2>
+                        <h2>{{c1}}</h2>
                         <button type="submit" id="boton_general" class="boton-general">Ver gráfica</button>
                         <br>
                     </div>
@@ -144,15 +133,15 @@
                                     series: [{
                                         type: 'column',
                                         name: 'Temperatura ambiente',
-                                        data: [{$con}, 2, 2, 3]
+                                        data: [$c1, 2, 2, 3]
                                     }, {
                                         type: 'column',
                                         name: 'Humedad',
-                                        data: [{$con1}, 3, 5, 7]
+                                        data: [2, 3, 5, 7]
                                     }, {
                                         type: 'column',
                                         name: 'Temperatura colmena',
-                                        data: [{$con2}, 3, 3, 9]
+                                        data: [2, 3, 3, 9]
                                     }, {
                                         type: 'spline',
                                         name: 'Promedio',
