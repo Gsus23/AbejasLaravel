@@ -133,7 +133,7 @@
                                     series: [{
                                         type: 'column',
                                         name: 'Temperatura ambiente',
-                                        data: [$c1, 2, 2, 3]
+                                        data: [<?php echo $c1 ?>, 2, 2, 3]
                                     }, {
                                         type: 'column',
                                         name: 'Humedad',
