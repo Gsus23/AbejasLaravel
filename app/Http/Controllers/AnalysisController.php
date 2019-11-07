@@ -64,7 +64,7 @@ class AnalysisController extends Controller
         $c=1;
         $c1=1;
         $c2=1;
-        $c31;
+        $c3=1;
 
 
 
