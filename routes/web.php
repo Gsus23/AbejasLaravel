@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('miAPP', function () {
+
+    return 'Esta es mi APP';
+});
 Route::name('imprimir')->get('/imprimir-pdf', 'Controller@imprimir');
 Route::get('/reports', 'ReportsController@index');
 Route::get('/statistics', 'StatisticsController@index');
