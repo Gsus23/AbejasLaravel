@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <?php
-    $c1;
-    if (empty($c1)) {
-        $c1="0";
+    $con;
+    if (empty($con)) {
+        $con="0";
+    }
+    $con1;
+    if (empty($con1)) {
+        $con1="0";
+    }
+    $con2;
+    if (empty($con2)) {
+        $con2="0";
+    }
+    $con3;
+    if (empty($con3)) {
+        $con3="0";
     }
    
 
@@ -133,7 +145,7 @@
                                     series: [{
                                         type: 'column',
                                         name: 'Temperatura ambiente',
-                                        data: [<?php echo $c1 ?>, 2, 2, 3]
+                                        data: [<?php echo $con ?>, <?php echo $con1 ?>, <?php echo $con2 ?>, <?php echo $con3 ?>]
                                     }, {
                                         type: 'column',
                                         name: 'Humedad',
