@@ -55,8 +55,12 @@ class Controller extends BaseController
             $actividadParcial = (($datos->entrada) + ($datos->salida));
             $actividadTotal = $actividadTotal + $actividadParcial;
         }   
-        $actividadTotal = $actividadTotal/count($estimacion);
-        
+        if (isset($estimacion)) {
+            $actividadTotal = "0";
+        }else{
+            $actividadTotal = $actividadTotal/count($estimacion);
+        }
+
         return view('estimates',compact('actividadTotal'));
     }
      
