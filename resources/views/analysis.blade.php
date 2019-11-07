@@ -143,19 +143,19 @@
                                     series: [{
                                         type: 'column',
                                         name: 'Temperatura ambiente',
-                                        data: [$con, 2, 2, 3]
+                                        data: [{$con}, 2, 2, 3]
                                     }, {
                                         type: 'column',
                                         name: 'Humedad',
-                                        data: [$con1, 3, 5, 7]
+                                        data: [{$con1}, 3, 5, 7]
                                     }, {
                                         type: 'column',
                                         name: 'Temperatura colmena',
-                                        data: [$con2, 3, 3, 9]
+                                        data: [{$con2}, 3, 3, 9]
                                     }, {
                                         type: 'spline',
                                         name: 'Promedio',
-                                        data: [$con3, 2.67, 3, 6.33],
+                                        data: [2, 2.67, 3, 6.33],
                                         marker: {
                                             lineWidth: 2,
                                             lineColor: Highcharts.getOptions().colors[3],
