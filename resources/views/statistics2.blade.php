@@ -1,5 +1,21 @@
 <!DOCTYPE html>
+<?php
+    $consulta;
+    if (empty($consulta)) {
+        $consulta="0";
+    }
+    $consulta1;
+    if (empty($consulta1)) {
+        $consulta1="0";
+    }
+    $consulta2;
+    if (empty($consulta2)) {
+        $consulta2="0";
+    }
+    
+   
 
+?>
 <html lang="en">
 
 
