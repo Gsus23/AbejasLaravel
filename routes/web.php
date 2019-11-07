@@ -15,11 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('miAPP', function () {
-    return 'Esta es mi APP';
-});
-
-
 Route::get('MiApp', function () {
 
     return 'Esta es mi aplicación';
@@ -33,11 +28,9 @@ Route::get('/estimates', 'EstimateController@index');
 Route::get('/analysis', 'AnalysisController@index');
 Route::get('/help', 'HelpController@index');
 Route::get('/home', 'HomeController@index');
-Route::get('/home', 'HomeController@index');
 
 Route::resource('controler', 'Controller');
 
-Route::post('/statistics', 'StatisticsController@store');
 Route::post('/statistics', 'StatisticsController@store');
 Route::post('/Analysis', 'AnalysisController@store');
 
@@ -45,17 +38,5 @@ Route::name('consultar')->get('/consultar','Controller@consultar');
 Route::name('estimar')->get('/estimar','Controller@estimar');
 Route::name('imprimir')->get('/imprimir', 'Controller@imprimir');
 
-
-Route::post('/statistics', 'StatisticsController@store');
-Route::post('/Analysis', 'AnalysisController@store');
-
-Auth::routes();
-
-
-
-
-
-
->>>>>>> 193f0f8334b0aa94501f10fe7c7eb1ac923aa3c1
 
 Auth::routes();
