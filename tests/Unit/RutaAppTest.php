@@ -13,7 +13,7 @@ class RutaAppTest extends TestCase
      */
     public function testRuta()
     {
-    	$response = $this->call('GET','miAPP');
+    	$response = $this->call('GET','MiApp');
     	$this->assertResponseOk();
         $this->assertEquals('Esta es mi APP', $response->getContent());
     }
